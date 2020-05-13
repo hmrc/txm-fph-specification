@@ -1,7 +1,32 @@
 @import "govuk_tech_docs";
 
-.video {
-    border: 1px solid #0b0c0c;
-    width: 560px;
-    height: 315px;
+.font-large {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.code--slim-large {
+  border: 1px solid #DFE0E7;
+  border-radius: 4px;
+  padding: 5px 5px 2px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: #F7F7F7;
+  line-height: 1.1em;
+  font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  color: #0b0c0c;
+  font-size: 19px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.code--slim {
+  border: 1px solid #DFE0E7;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  font-size: 16px;
+  display: inline-block;
+  background-color: #F7F7F7;
+  line-height: 1.1em;
 }
