@@ -1,7 +1,5 @@
 ---
-title: Fraud Prevention
-weight: 1
-description:
+description: Page description for search engines
 ---
 
 # Fraud prevention
