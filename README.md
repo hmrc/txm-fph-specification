@@ -14,7 +14,7 @@ bundle install
 ```
 
 ## Making changes
-
+REMOVE ME
 To make changes edit the source files in the `source` folder.
 
 ### Single page output
