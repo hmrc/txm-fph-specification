@@ -1,6 +1,9 @@
 ---
-title: Status reports
+title: Security
+weight: 5
 description: Page description for search engines
 ---
 
-# Status reports
+# Security
+
+## GDPR
