@@ -1,14 +1,21 @@
 ---
 title: Header requirements
-weight: 2
+weight: 3
 description: Page description for search engines
 ---
 
 # Header requirements
 
-<span class="font-large">All headers must use the US-ASCII character set US-ASCII, with other characters percent encoded as in RFC3986 (opens in a new tab).</span>
+<span class="font-large">[Message about selecting your connection method.]</span>
 
-<br>
+## All headers
+
+All headers must use the US-ASCII character set US-ASCII, with other characters percent encoded as in RFC3986 (opens in a new tab).
+
+[Additional general formatting messages.]
+
+## Definitions and examples
+
 <p><span class="code--slim-large">Gov-Client-Connection-Method</span><br>
 
 A string representing the connection method used for the request. [Add message and link to selecting your connection method.]
