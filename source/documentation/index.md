@@ -11,7 +11,7 @@ description: Page description for search engines
 ***
 
 
-## Why you need to send header data
+## Why you need to send data
 
 
 ## Your legal obligations
