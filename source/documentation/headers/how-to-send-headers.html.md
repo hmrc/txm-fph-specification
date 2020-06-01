@@ -1,10 +1,10 @@
 ---
-title: How to send headers
+title: How to send header data
 weight: 2
 description: Page description for search engines
 ---
 
-# How to send headers
+# How to send header data
 
 ## Select your connection method
 
