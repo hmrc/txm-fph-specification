@@ -40,6 +40,10 @@ We have published our <a href="/api-documentation/assets/content/documentation/3
 * tell the public why we are processing particular personal data
 * help software developers amend their privacy notices in relation to our APIs
 
+### Using third-party software and libraries
+
+If you use or plan to use third-party software and libraries, for example an extension to an ERP system or a plugin to a spreadsheet application, make sure you can still access the header data you need to send to HMRC.
+
 ## Security
 
 Transaction Monitoring (TxM) is a key security approach adopted in the UK and globally. Our approach is in line with National Cyber Security Centre (NCSC) and Cabinet Office <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/271268/GPG_53_Transaction_Monitoring_issue_1-1_April_2013.pdf">recommended guidance</a> and industry good practice.
