@@ -53,3 +53,5 @@ Your application connects to HMRC through intermediary servers but is not covere
 
 
 ## Use the Test API
+
+Use our <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api">Test Fraud Prevention Headers API (opens in a new tab)</a> to check that the headers submitted by your application are formatted correctly. It can be used during the initial development phase and as part of your regular quality assurance checks.
