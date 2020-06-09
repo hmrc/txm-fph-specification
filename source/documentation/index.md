@@ -6,14 +6,12 @@ description: Page description for search engines
 
 # Fraud prevention
 
-**Version 3.0 issued Day Month 2020**
+**Version 2.9**
 
-Minor versions are backwards compatible - each minor version adds more examples and advice.
-
-***
+[Issued] 5 March 2020
 
 
-## Why you need to send data
+## Why you must send data
 
 
 We monitor transactions to protect taxpayers from infringement of their data by criminals or fraudsters. Without the protection offered by TxM, personal data could be compromised, leading to fraud against taxpayers or the UK Exchequer.

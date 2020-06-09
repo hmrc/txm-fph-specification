@@ -1,17 +1,16 @@
 ---
-title: How to send header data
+title: What you need to send
 weight: 2
 description: Page description for search engines
 ---
 
-# How to send header data
-
-## Select your connection method
+# What you need to send
 
 <span class="font-large">It’s important to select the correct connection method for your application. Your connection method determines which header data you need to send.
 </span>
 
-### Direct or via  intermediary servers
+
+### Direct or via intermediary servers
 
 Your application connects directly to HMRC or via intermediary servers. Select a direct connection method if your application connects directly to HMRC.
 
@@ -30,7 +29,9 @@ In most connection methods, it’s most likely the device that is physically in 
 
 <p>In <span class="code--slim">DESKTOP_APP_DIRECT</span> or <span class="code--slim">DESKTOP_APP_VIA_SERVER</span>, it might be a hosted desktop environment accessed remotely by the user.</p>
 
-### Connection methods
+
+## Select your connection method
+
 
 You need to select 1 of these connection methods:
 
@@ -52,6 +53,7 @@ Your application is web based, connecting to HMRC through intermediary servers.
 <p><span class="code--slim-large">BATCH_PROCESS_DIRECT</span><br>
 Your application uses batch processes, connecting directly to HMRC.
 
+
 ### If your application does not fall into common architectures
 
 You can select <span class="code--slim-large">OTHER_*</span>. We may ask you for more details.  
@@ -61,8 +63,3 @@ Your application connects directly to HMRC but is not covered by the common conn
 
 <p><span class="code--slim-large">OTHER_VIA_SERVER</span><br>
 Your application connects to HMRC through intermediary servers but is not covered by the common connection methods.
-
-
-## Use the Test API
-
-Use our <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api">Test Fraud Prevention Headers API (opens in a new tab)</a> to check that the headers submitted by your application are formatted correctly. It can be used during the initial development phase and as part of your regular quality assurance checks.

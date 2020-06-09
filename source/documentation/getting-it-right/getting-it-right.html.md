@@ -6,6 +6,10 @@ description: Page description for search engines
 
 # Getting it right
 
+## Use the Test API
+
+Use our <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api">Test Fraud Prevention Headers API (opens in a new tab)</a> to check that the headers submitted by your application are formatted correctly. It can be used during the initial development phase and as part of your regular quality assurance checks.
+
 ## Missing header data
 
 [Add exclamation mark]
@@ -39,4 +43,5 @@ If a header is not required for your connection method, then you can leave it ou
 
 ## Contact us
 
-If you need to contact us, email SDSTeam@hmrc.gov.uk 
+If you need to contact us, email SDSTeam@hmrc.gov.uk
+[Check if we need to say anything more here]
