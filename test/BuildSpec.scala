@@ -16,15 +16,34 @@
 
 package test
 
+import java.io.{File, PrintWriter}
+
 import org.scalatest.{Matchers, WordSpec}
+
+import scala.io.Source
 import sys.process._
 
 class BuildSpec extends WordSpec with Matchers {
   "Building the content" should {
     "produce static files" in {
-      val result = "bundle install" #&& Process("bundle exec middleman build --build-dir=public/ --clean", None, "BASE_PATH" -> "/guides/fraud-prevention/") !
+      val result = "bundle install" #&& Process(
+        "bundle exec middleman build --build-dir=public/ --clean",
+        None,
+        "BASE_PATH" -> "/guides/fraud-prevention/"
+      ) !
 
       result shouldBe 0
+
+      val fileHandle = new File("public/stylesheets/manifest.css")
+      val source = Source.fromFile(fileHandle, "UTF-8")
+      val content = source.getLines
+        .mkString("\n")
+        .replace("url(\"", "url(\"/guides/fraud-prevention")
+      source.close()
+
+      val pw = new PrintWriter(fileHandle, "UTF-8")
+      pw.write(content)
+      pw.close()
     }
   }
 }
