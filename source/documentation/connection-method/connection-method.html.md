@@ -8,18 +8,9 @@ description: Page description for search engines
 
 The data you need to send depends on your connection method. For example, your application connects directly to HMRC or via intermediary servers on a certain device.
 
-
-<<<<<<< Updated upstream
-<p class="panel panel-border-wide">It’s important to select the correct connection method for your application. If you're not sure, <a href="/documentation/getting-it-right/getting-it-right.html#getting-it-right">check your connection method</a>.</p>
-=======
 ## Confirm your connection method
->>>>>>> Stashed changes
-
 To check what header data you need to send, confirm the connection method for your application.
 
-<<<<<<< Updated upstream
-Filter and results go here.
-=======
 <div class="filter-container">
     <form method="GET" action="">
         <div class="govuk-form-group">
@@ -85,4 +76,4 @@ In most connection methods, it’s most likely the device that is physically in 
 <p>In <span class="code--slim">BATCH_PROCESS_DIRECT</span>, it might be a vendor’s server.</p>
 
 <p>In <span class="code--slim">DESKTOP_APP_DIRECT</span> or <span class="code--slim">DESKTOP_APP_VIA_SERVER</span>, it might be a hosted desktop environment accessed remotely by the user.</p>
->>>>>>> Stashed changes
+
