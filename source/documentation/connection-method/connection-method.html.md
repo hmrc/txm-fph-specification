@@ -6,7 +6,7 @@ description: Page description for search engines
 
 # What you need to send
 
-Your connection method determines the header data you need to send. For example, your application connects directly to HMRC or via intermediary servers.
+The data you need to send depends on your connection method. For example, your application connects directly to HMRC or via intermediary servers on a certain device.
 
 
 <<<<<<< Updated upstream
@@ -15,6 +15,7 @@ Your connection method determines the header data you need to send. For example,
 ## Confirm your connection method
 >>>>>>> Stashed changes
 
+To check what header data you need to send, confirm the connection method for your application.
 
 <<<<<<< Updated upstream
 Filter and results go here.
