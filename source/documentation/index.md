@@ -30,7 +30,7 @@ If you need to review your privacy notices, you can <a href="/api-documentation/
 
 ### Using third-party software and libraries
 
-If you use or plan to use third-party software and libraries, make sure you can still access header data. Examples include an extension to an ERP system or a plug- in to a spreadsheet application.
+If you use or plan to use third-party software and libraries, make sure you can still access header data. Examples include an extension to an ERP system or a plug-in to a spreadsheet application.
 
 ### Security
 
