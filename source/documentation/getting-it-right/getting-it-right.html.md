@@ -28,6 +28,10 @@ For example, an application connecting directly to HMRC might not be able to sup
 
 <p class="code--slim">Gov-Client-User-IDs:</p>
 
+### Using third-party software and libraries
+
+If you use or plan to use third-party software and libraries, make sure you can still access header data. Examples include an extension to an ERP system or a plug-in to a spreadsheet application.
+
 ### Headers not required
 If a header is not required for your connection method, then you can leave it out entirely when making your submission, or submit it with an empty header value. You must not supply null values, for example, the following are not valid:
 
