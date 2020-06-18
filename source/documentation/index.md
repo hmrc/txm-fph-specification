@@ -28,6 +28,8 @@ Soon, you'll need to send header data for all of our APIs. We recommend designin
 
 HMRC has the right to collect audit data. We follow best practices set out by the Information Commissioner’s Office.
 
+Transaction monitoring is a key security approach used in the UK and globally. Our approach follows the National Cyber Security Centre (NCSC) and Cabinet Office’s <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/271268/GPG_53_Transaction_Monitoring_issue_1-1_April_2013.pdf">recommended guidance</a>.
+
 For more information or to review your privacy notices, <a href="/api-documentation/assets/content/documentation/3f4c263faa8231bea05c1826b7f6b81c-TxM DPIA v3 1 Public.pdf">check the data protection impact assessment</a>. You can also <a href="http://www.legislation.gov.uk/uksi/2019/360/made">check the regulations</a>.
 
 Transaction monitoring is a key security approach used in the UK and globally. Our approach follows the National Cyber Security Centre (NCSC) and Cabinet Office’s <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/271268/GPG_53_Transaction_Monitoring_issue_1-1_April_2013.pdf">recommended guidance</a>.
