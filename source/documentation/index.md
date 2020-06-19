@@ -1,10 +1,10 @@
 ---
-title: Send data to prevent fraud
+title: Fraud prevention
 weight: 1
 description: Page description for search engines
 ---
 
-# Send data to prevent fraud
+# Fraud prevention
 
 Version 2.9 issued 5 March 2020
 
