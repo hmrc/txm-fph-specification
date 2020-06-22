@@ -6,4 +6,10 @@ description: Page description for search engines
 
 # Use the Test API
 
-Use our <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api">Test Fraud Prevention Headers API (opens in a new tab)</a> to check that the headers submitted by your application are formatted correctly. It can be used during the initial development phase and as part of your regular quality assurance checks.
+Before you submit any headers, check that your data meets the requirements and is formatted correctly.
+
+You can use the Test API during initial development and as part of your quality assurance checks.
+
+<div>
+    <button class="govuk-button" type="submit">Go to the Test API</button>
+</div>
