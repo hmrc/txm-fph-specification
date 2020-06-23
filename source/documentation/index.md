@@ -12,17 +12,12 @@ Version 2.9 issued 5 March 2020
 ## Why you must send data
 
 
-We monitor transactions to help protect your customers' confidential data from criminals and fraudsters. To make this possible, you must send us specific types of user audit data.
-
-Our APIs include HTTP fraud prevention headers so that you can submit the data we need. We use the data support prosecutions for tax or duty fraud.
+HMRC needs user audit data to support prosecutions for tax or duty fraud. Our APIs include HTTP fraud prevention headers so that you can submit the data we need.
 
 You are required by law to submit header data for the <a href="/api-documentation/docs/api/service/vat-api/1.0">VAT (MTD) API</a>.
 
 Soon, you'll need to send header data for all of our APIs. We recommend designing this into your applications now.
 
-<button class="govuk-button" data-module="govuk-button">
-  Check the specification
-</button>
 
 ### Privacy and security
 

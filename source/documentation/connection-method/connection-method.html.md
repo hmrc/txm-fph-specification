@@ -8,7 +8,6 @@ description: Page description for search engines
 
 The header data you need to send depends on your application's connection method. For example, your application connects directly to HMRC or via intermediary servers on a certain device.
 
-## Your connection method
 To check what you need to send, you need to confirm your connection method. If you are not sure, <a href="">check the connection methods</a>.
 
 <div class="filter-container">
