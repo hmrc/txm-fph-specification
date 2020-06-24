@@ -6,40 +6,35 @@ description: Page description for search engines
 
 # Getting it right
 
+[Add exclamation mark]
+<strong class="bold-small">You are required by law to submit all header data for your connection method.</strong>
+
 ## Missing header data
 
-[Add exclamation mark]
-<strong class="bold-small">It is mandatory to send all header information for your connection method.</strong>
+Most organisations are able to send all header data required for their connection method.
 
-In some cases, while the header itself is required for your connection method, we anticipate you might not be able to collect a value because:
+In some cases, you might not be able to collect a value due to:
 
-* of operating system or platform restrictions beyond your reasonable control
-* of security measures beyond your reasonable control
-* the header is not applicable, as called out explicitly by the header documentation
+* operating system or platform restrictions beyond your reasonable control
+* security measures beyond your reasonable control
 
-Only in these cases, you must submit the header with an empty value or omit it entirely. You must not supply null values.
+For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the operating system of the originating device has no concept of user accounts.
 
-In all other cases, you must submit a valid value and not leave the header empty.
+<p class="panel panel-border-wide">In unusual cases like this, you can submit the header with an empty value or omit it entirely. We may contact you for more details.</p>
 
-[Add exclamation mark]
-<strong class="bold-small"> If you are unable to collect a header value, or if you are omitting or leaving a value blank then HMRC may contact you to ask you to give more information. </strong>
-
-For example, an application connecting directly to HMRC might not be able to supply a username for Gov-Client-User-IDs if the operating system of the originating device has no concept of user accounts, so the header can be omitted entirely or left empty as follows:
-
-<p class="code--slim">Gov-Client-User-IDs:</p>
-
-### Using third-party software and libraries
-
-If you use or plan to use third-party software and libraries, make sure you can still access header data. Examples include an extension to an ERP system or a plug-in to a spreadsheet application.
-
-### Headers not required
-If a header is not required for your connection method, then you can leave it out entirely when making your submission, or submit it with an empty header value. You must not supply null values, for example, the following are not valid:
+If you leave a header empty, do not submit null values. These examples are not valid:
 
 <ul>
         <li><span class="code--slim">Gov-Client-User-IDs: null</span></li>
         <li><span class="code--slim">Gov-Client-User-IDs: nil</span></li>
         <li><span class="code--slim">Gov-Client-User-IDs: undefined</span></li>
       </ul>
+
+
+### Using third-party software and libraries
+
+If you use or plan to use third-party software and libraries, make sure you can still collect header data. Examples include an extension to an ERP system or a plug-in to a spreadsheet application.
+
 
 ## Contact us
 
