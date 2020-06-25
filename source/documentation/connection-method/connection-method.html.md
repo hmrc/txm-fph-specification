@@ -37,7 +37,7 @@ Your application uses batch processes, connecting directly to HMRC.
 
 Your application connects directly to HMRC or via intermediary servers. Select a direct connection method if your application connects directly to HMRC.
 
-If your application does not connect directly to HMRC, you need to select a server connection method. This refers to intermediary servers that [are part of your application domain and] are in your control. It does not include third-party servers such as transport layers or internet providers.
+If your application does not connect directly to HMRC, you need to select a server connection method. This refers to intermediary servers that are part of your application domain and are in your control. It does not include third-party servers such as transport layers or internet providers.
 
 Where multiple services manage your intermediary servers, headers must contain data from all services.
 
@@ -48,6 +48,6 @@ Originating device means the device that initiates an action.
 
 In most connection methods, it is usually the device that is physically in the possession of the person initiating the requests.
 
-<p>In <span class="code--slim">BATCH_PROCESS_DIRECT</span>, it might be a vendor’s server.</p>
+<p>In Batch process direct, it might be a vendor’s server.</p>
 
-<p>In <span class="code--slim">DESKTOP_APP_DIRECT</span> or <span class="code--slim">DESKTOP_APP_VIA_SERVER</span>, it might be a hosted desktop environment accessed remotely by the user.</p>
+<p>In Desktop application direct, or Desktop application via server, it might be a hosted desktop environment accessed remotely by the user.</p>
