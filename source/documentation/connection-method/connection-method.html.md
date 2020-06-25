@@ -6,29 +6,48 @@ description: Page description for search engines
 
 # What you need to send
 
-The header data you need to send depends on your application's connection method. For example, your application connects directly to HMRC or via intermediary servers on a certain device.
+The header data you need to send depends on your software architecture. We refer to your architecture as a connection method.
 
-To check what you need to send, you need to confirm your connection method. If you are not sure, <a href="">check the connection methods</a>.
+## Select your connection method
 
-<div class="filter-container">
-    <form method="GET" action="">
-        <div class="govuk-form-group">
-            <label class="govuk-label" for="conection-method-filter"><h3>Select your connection method</h3></label>
-            <select class="govuk-select" id="connection-method-filter" name="filter">
-                <option disabled="" selected="">Select an option</option>
-                <option value="BATCH_PROCESS_DIRECT">BATCH_PROCESS_DIRECT</option>
-                <option value="DESKTOP_APP_DIRECT">DESKTOP_APP_DIRECT</option>
-                <option value="DESKTOP_APP_VIA_SERVER">DESKTOP_APP_VIA_SERVER</option>
-                <option value="INVALID_OR_MISSING">INVALID_OR_MISSING</option>
-                <option value="MOBILE_APP_DIRECT">MOBILE_APP_DIRECT</option>
-                <option value="MOBILE_APP_VIA_SERVER">MOBILE_APP_VIA_SERVER</option>
-                <option value="OTHER_DIRECT">OTHER_DIRECT</option>
-                <option value="OTHER_VIA_SERVER">OTHER_VIA_SERVER</option>
-                <option value="WEB_APP_VIA_SERVER">WEB_APP_VIA_SERVER</option>
-            </select>
-        </div>
-        <div>
-            <button class="govuk-button" type="submit">Filter</button>
-        </div>
-    </form>
-</div>
+<a href="">Desktop application direct</a><br>
+Your application is installed on a desktop connecting directly to HMRC. Desktops include computers and laptops.</p>
+
+<a href="">Desktop application via server</a><br>
+Your application is installed on a desktop connecting to HMRC through intermediary servers. Desktops include computers and laptops.
+
+<a href="">Mobile application direct</a><br>
+Your application is installed on a mobile device connecting directly to HMRC. Mobile devices include phones and tablets.
+
+<a href="">Mobile application via server</a><br>
+Your application is installed on a mobile device connecting to HMRC through intermediary servers. Mobile devices include phones and tablets.
+
+<a href="">Web application via server</a><br>
+Your application is web based, connecting to HMRC through intermediary servers.
+
+<a href="">Batch process direct</a><br>
+Your application uses batch processes, connecting directly to HMRC.
+
+
+<a href="">If your architecture is not listed</a>
+
+
+
+### Direct or via intermediary servers
+
+Your application connects directly to HMRC or via intermediary servers. Select a direct connection method if your application connects directly to HMRC.
+
+If your application does not connect directly to HMRC, you need to select a server connection method. This refers to intermediary servers that [are part of your application domain and] are in your control. It does not include third-party servers such as transport layers or internet providers.
+
+Where multiple services manage your intermediary servers, headers must contain data from all services.
+
+
+### Originating device
+
+Originating device means the device that initiates an action.
+
+In most connection methods, it is usually the device that is physically in the possession of the person initiating the requests.
+
+<p>In <span class="code--slim">BATCH_PROCESS_DIRECT</span>, it might be a vendor’s server.</p>
+
+<p>In <span class="code--slim">DESKTOP_APP_DIRECT</span> or <span class="code--slim">DESKTOP_APP_VIA_SERVER</span>, it might be a hosted desktop environment accessed remotely by the user.</p>
