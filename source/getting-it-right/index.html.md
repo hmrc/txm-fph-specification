@@ -1,13 +1,18 @@
 ---
-title: Getting it right | Fraud prevention
-weight: 5
+title: Getting it right - Fraud prevention
+weight: 50
 description: Page description for search engines
 ---
 
 # Getting it right
 
-[Add exclamation mark]
-<strong class="bold-small">You are required by law to submit all header data for your connection method.</strong>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    You are required by law to submit all header data for your connection method.
+  </strong>
+</div>
 
 ## Missing header data
 
@@ -25,10 +30,10 @@ For example, an application connecting directly to HMRC might not be able to sub
 If you leave a header empty, do not submit null values. These examples are not valid:
 
 <ul>
-        <li><span class="code--slim">Gov-Client-User-IDs: null</span></li>
-        <li><span class="code--slim">Gov-Client-User-IDs: nil</span></li>
-        <li><span class="code--slim">Gov-Client-User-IDs: undefined</span></li>
-      </ul>
+  <li><span class="code--slim">Gov-Client-User-IDs: null</span></li>
+  <li><span class="code--slim">Gov-Client-User-IDs: nil</span></li>
+  <li><span class="code--slim">Gov-Client-User-IDs: undefined</span></li>
+</ul>
 
 
 ### Using third-party software and libraries
