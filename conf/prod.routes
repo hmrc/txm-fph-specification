@@ -1,4 +1,6 @@
-->      /                                  health.Routes
-GET     /guides/fraud-prevention           controllers.Default.redirect(to = "/guides/fraud-prevention/")
-GET     /guides/fraud-prevention/          controllers.Assets.at(path="/public", file="index.html")
-GET     /guides/fraud-prevention/*file     controllers.Assets.at(path="/public", file)
+->      /                                           health.Routes
+GET     /guides/fraud-prevention                    controllers.Default.redirect(to = "/guides/fraud-prevention/")
+GET     /guides/fraud-prevention/                   controllers.Assets.at(path="/public", file="index.html")
+GET     /guides/fraud-prevention/:path/             controllers.DocumentationController.topLevelPage(path)
+GET     /guides/fraud-prevention/:parent/:child/    controllers.DocumentationController.childPage(parent, child)
+GET     /guides/fraud-prevention/*file              controllers.Assets.at(path="/public", file)

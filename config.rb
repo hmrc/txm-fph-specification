@@ -1,7 +1,13 @@
 require 'govuk_tech_docs'
-require 'govuk_tech_docs/table_of_contents/heading'
-require 'govuk_tech_docs/table_of_contents/headings_builder'
+
+require "govuk_tech_docs/table_of_contents/heading_tree_builder"
+require "govuk_tech_docs/table_of_contents/heading_tree_renderer"
+require "govuk_tech_docs/table_of_contents/heading_tree"
+require "govuk_tech_docs/table_of_contents/heading"
+require "govuk_tech_docs/table_of_contents/headings_builder"
 require 'govuk_tech_docs/tech_docs_html_renderer'
+
+require 'middleman-core/logger';
 
 configure :build do
   base_path = ENV['BASE_PATH'] || '/' # Note: please ensure BASE_PATH ends with a trailing '/'
@@ -10,34 +16,26 @@ configure :build do
   config[:http_prefix] = base_path
 
   module GovukTechDocs::TableOfContents::Helpers
-    def render_page_tree(resources, current_page, config, current_page_html)
-      resources = resources.sort_by { |r| [r.data.weight ? 0 : 1, r.data.weight || 0] }
-      output = '';
-      resources.each do |resource|
-        content =
-          if current_page.url == resource.url && current_page_html
-            current_page_html
-          else
-            resource.render(layout: false)
-          end
-        # Avoid redirect pages
-        next if content.include? "http-equiv=refresh"
 
-        if resource.children.any? && resource.url != config[:http_prefix]
-          output += %{<ul><li><a href="#{resource.url}">#{resource.data.title}</a>\n}
-          output += render_page_tree(resource.children, current_page, config, current_page_html)
-          output += '</li></ul>'
-        else
-          output +=
-            single_page_table_of_contents(
-              content,
-              url: resource.url,
-              max_level: config[:tech_docs][:max_toc_heading_level]
-            )
-        end
-      end
-      output
+    def multi_page_table_of_contents(resources, current_page, config, current_page_html = nil)
+      # Only parse top level html files
+      # Sorted by weight frontmatter
+      home_url =
+           if config[:http_prefix].end_with?("/")
+             config[:http_prefix]
+           else
+             config[:http_prefix] + "/"
+           end
+      logger.warn("EJ multi_page_table_of_contents")
+      resources = resources
+      .select { |r| r.path.end_with?(".html") && (r.parent.nil? || r.parent.url == home_url) }
+      .sort_by { |r| [r.data.weight ? 0 : 1, r.data.weight || 0] }
+
+      logger.warn(resources)
+      render_page_tree(resources, current_page, config, current_page_html)
     end
+
+
   end
 
   module GovukTechDocs::TableOfContents
