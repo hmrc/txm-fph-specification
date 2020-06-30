@@ -18,7 +18,7 @@ description: Page description for search engines
 
 Most organisations are able to send all header data required for their connection method.
 
-In some cases, you might not be able to collect a value due to:
+In some cases, you might not be able to collect a value due to restrictions beyond your reasonable control. Thi
 
 * operating system or platform restrictions beyond your reasonable control
 * security measures beyond your reasonable control
@@ -38,7 +38,7 @@ If you leave a header empty, do not submit null values. These examples are not v
 
 ### Using third-party software and libraries
 
-If you use or plan to use third-party software and libraries, make sure you can still collect header data. Examples include an extension to an ERP system or a plug-in to a spreadsheet application.
+If you use or plan to use third-party software and libraries, make sure you can still collect header data. Examples include an extension to an Enterprise Resource Planning (ERP) system or a plug-in to a spreadsheet application.
 
 
 ## Contact us
