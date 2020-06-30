@@ -44,4 +44,3 @@ If you use or plan to use third-party software and libraries, make sure you can 
 ## Contact us
 
 If you need to contact us, email SDSTeam@hmrc.gov.uk
-[Check if we need to say anything more here]
