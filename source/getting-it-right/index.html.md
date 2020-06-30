@@ -18,16 +18,18 @@ description: Page description for search engines
 
 Most organisations are able to send all header data required for their connection method.
 
-In some cases, you might not be able to collect a value due to restrictions beyond your reasonable control. Thi
+<div class="govuk-inset-text">
+You can only submit a header with an empty value or omit it entirely in exceptional cases. We may contact you for more details.
+</div>
+
+In some cases, you might not be able to collect a value due to restrictions beyond your reasonable control.
 
 * operating system or platform restrictions beyond your reasonable control
 * security measures beyond your reasonable control
 
 For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the operating system of the originating device has no concept of user accounts.
 
-<p class="panel panel-border-wide">In unusual cases like this, you can submit the header with an empty value or omit it entirely. We may contact you for more details.</p>
-
-If you leave a header empty, do not submit null values. These examples are not valid:
+If you leave a header empty, do not submit any value including null values. These examples are not valid:
 
 <ul>
   <li><span class="code--slim">Gov-Client-User-IDs: null</span></li>
