@@ -19,7 +19,7 @@ Each header has additional formatting requirements.
 
 Whenever a header contains a key-value data structure, you must use this format:
 
-<code><key-1>=<value-1>&<key-2>=<value-2>&…</code>
+<code>&lt;key-1&gt;=&lt;value-1&gt;&amp;&lt;key-2&gt;=&lt;value-2&gt;&amp;&hellip;</code>
 
 Whenever a key is applicable but has no applicable value, you can omit the key-value pair or include the key with an empty value.
 
@@ -32,7 +32,7 @@ Key-value pairs can be submitted in any order.
 
 Whenever a header contains a list, you must use this format:
 
-<code><value-1>,<value-2>,…</code>
+<code>&lt;value-1&gt;,&lt;value-2&gt;,&hellip;</code>
 
 Values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1"> percent encoded (opens in a new tab)</a>.
 
