@@ -6,9 +6,9 @@ description: Page description for search engines
 
 # What you need to send
 
-Version 2.9 issued 5 March 2020
-
 The header data you need to send depends on your software architecture. We refer to your architecture as a connection method.
+
+To find out what data you need to send, you must select your connection method. This depends on <a href="">how your application connects</a> to HMRC and your <a href="">originating device</a>.
 
 ## Select your connection method
 
@@ -51,16 +51,16 @@ Your application uses batch processes, connecting directly to HMRC.
 
 
 
-### Direct or via intermediary servers
+### Direct or via intermediary servers?
 
-Your application connects directly to HMRC or via intermediary servers. Select a direct connection method if your application connects directly to HMRC.
+If your application connects directly to HMRC, select a direct connection method.
 
-If your application does not connect directly to HMRC, you need to select a server connection method. This refers to intermediary servers that are part of your application domain and are in your control. It does not include third-party servers such as transport layers or internet providers.
+If your application does not connect directly to HMRC, select a server connection method. This refers to intermediary servers that are part of your application domain and are in your control. It does not include third-party servers such as transport layers or internet providers.
 
 Where multiple services manage your intermediary servers, headers must contain data from all services.
 
 
-### Originating device
+### What is your originating device?
 
 Originating device means the device that initiates an action.
 
