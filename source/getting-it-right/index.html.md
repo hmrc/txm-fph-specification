@@ -6,13 +6,11 @@ description: Page description for search engines
 
 # Getting it right
 
-<<<<<<< Updated upstream
-=======
 Version 2.9 issued 5 March 2020
 
 ## Send data in the correct format
 
-Header data contents must be submitted using the US-ASCII character set, with other characters <a href="https://tools.ietf.org/html/rfc3986#section-2.1"> percent encoded (opens in a new tab)</a>.
+Header data contents must be submitted using the US-ASCII character set, with other characters <a href="https://tools.ietf.org/html/rfc3986#section-2.1"> percent encoded (opens in a new tab)</a>. 
 
 Each header has additional formatting requirements.  
 
@@ -43,7 +41,6 @@ Values must not be empty.
 
 ## Missing header data
 
->>>>>>> Stashed changes
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
@@ -52,20 +49,18 @@ Values must not be empty.
   </strong>
 </div>
 
-## Missing header data
-
 Most organisations are able to send all header data required for their connection method.
 
-<div class="govuk-inset-text">
-You can only submit a header with an empty value or omit it entirely in exceptional cases. We may contact you for more details.
-</div>
-
-In some cases, you might not be able to collect a value due to restrictions beyond your reasonable control.
+In some exceptional cases, you might not be able to collect a value due to restrictions beyond your reasonable control.
 
 * operating system or platform restrictions beyond your reasonable control
 * security measures beyond your reasonable control
 
 For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the operating system of the <a href="/connection-method/#what-is-your-originating-device">originating device</a> has no concept of user accounts.
+
+<div class="govuk-inset-text">
+You can only submit a header with an empty value or omit it entirely in exceptional cases. We may contact you for more details.
+</div>
 
 If you leave a header empty, do not submit any value including null values. These examples are not valid:
 
