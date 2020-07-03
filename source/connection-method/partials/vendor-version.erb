@@ -2,8 +2,8 @@
 
 A key-value data structure of versions of your software involved in handling a request.
 
-* Use this format:<br>
- <software-name>=<version-number-1>&<software-name-2>=<version-number-2>& …
+* Use this format: <br>
+ <code>&lt;software-name&gt;=&lt;version-number-1&gt;&&lt;software-name-2&gt;=&lt;version-number-2&gt;& …</code>
 
 * Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).
 
@@ -18,3 +18,4 @@ A key-value data structure of versions of your software involved in handling a r
 <strong>Example</strong>
 
 <pre><code>Gov-Vendor-Version: My%20Desktop%20Software=1.2.3.build4286Gov-Vendor-Version: my-frontend-app=2.2.2&my-serverside-code=v3.8</code></pre>
+<% end %>
