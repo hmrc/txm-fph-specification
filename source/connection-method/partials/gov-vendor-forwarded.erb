@@ -1,0 +1,42 @@
+### Gov-Vendor-Forwarded
+
+A list that details hops over the internet between services that terminate Transport Layer Security (TLS).
+
+* For each hop over the internet, a key-value data structure with a by and for field must be appended to the list
+
+* The by field must be the public IP address that the server received the request on
+
+* The for field must be the public IP address of the request sender. For the first hop, this is the public IP address of the client. For subsequent hops, it is the public IP address of the intermediate server.
+
+* Each key and value must be percent encoded. Do not percent encode separators (equal signs, ampersands and commas).
+
+* Do not include hops within a private network
+
+Example 1
+
+A simple client and server request.
+
+A web client with the public IP address 198.51.100.0 makes a request to a vendor server
+
+
+The vendor server with the public IP address 203.0.113.6  receives the request and forwards it to HMRC.
+Then, the header should look like this:
+Gov-Vendor-Forwarded: by=203.0.113.6&for=198.51.100.0
+
+Example 2
+The request passes through a Web Application Firewall (WAF) and multiple servers belonging to the vendor.
+
+Make sure by and for fields are added for every hop within the request.
+
+A web client, on public IP address 198.51.100.0, makes a request to a WAF
+
+
+The WAF, on public IP address 2001:0db8:85a3:0000:0000:8a2e:0370:7334 , receives the request and forwards it to vendor server 1
+
+
+Vendor server 1, on public IP address 203.0.113.6, receives the request and forwards it to vendor server 2
+
+
+Vendor server 2, on public IP address  176.30.57.118,  receives the request and forwards it to HMRC
+Then, the header should look like this:
+Gov-Vendor-Forwarded: by=2001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334&for=198.51.100.0,by=203.0.113.6&for=2001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334,by=176.30.57.118&for=203.0.113.6

@@ -6,13 +6,20 @@ description: Page description for search engines
 
 # Desktop application direct
 
-Here are the headers that you must send when your connection method is DESKTOP_APP_DIRECT
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    You need to submit data for all of these headers.
+  </strong>
+</div>
 
-<%= partial 'connection-method/partials/gov-client-connection-method-desktop-app-direct' %>
+
+<%= partial 'connection-method/partials/gov-client-connection-method', :locals => { :connection_method => 'DESKTOP_APP_DIRECT' } %>
 <hr class="govuk-section-break govuk-section-break--visible">
 <%= partial 'connection-method/partials/gov-client-public-ips' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 <%= partial 'connection-method/partials/gov-client-local-ips' %>
 <hr class="govuk-section-break govuk-section-break--visible">
-<%= partial 'connection-method/partials/gov-client-user-ids' %>
+<%= partial 'connection-method/partials/gov-client-user-ids', :locals => { :connection_method => 'DESKTOP_APP_DIRECT' } %>
 <hr class="govuk-section-break govuk-section-break--visible">

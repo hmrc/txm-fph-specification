@@ -1,0 +1,20 @@
+### Gov-Vendor-Version
+
+A key-value data structure of versions of your software involved in handling a request.
+
+* Use this format:<br>
+ <software-name>=<version-number-1>&<software-name-2>=<version-number-2>& …
+
+* Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).
+
+<% if locals[:connection_method] == 'DESKTOP_APP_DIRECT' %>
+<strong>Example</strong>
+
+<pre><code>Gov-Vendor-Version: My%20Desktop%20Software=1.2.3.build4286</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'MOBILE_APP_VIA_SERVER' %>
+<strong>Example</strong>
+
+<pre><code>Gov-Vendor-Version: My%20Desktop%20Software=1.2.3.build4286Gov-Vendor-Version: my-frontend-app=2.2.2&my-serverside-code=v3.8</code></pre>

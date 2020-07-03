@@ -1,0 +1,15 @@
+### Gov-Client-Screens
+
+Information about the originating device’s screens. The fields are:
+
+<code>width</code> is the reported width of the screen in pixels
+
+<code>height</code> is the reported height of the screen in pixels
+
+<code>scaling-factor</code> is the reported scaling factor of the screen. For example, high-pixel density screens might have a scaling factor of 2, whereas standard definition screens might have a scaling factor of 1.
+
+<code>colour-depth</code> is the colour depth of the screen in bits. This should be displayed as a key-value data structure with <code>width</code> and <code>height</code> fields.
+
+<strong>Example</strong>
+
+<pre><code>Gov-Client-Screens: width=1920&height=1080&scaling-factor=1&colour-depth=16,width=3000&height=2000&scaling-factor=1.25&colour-depth=16</pre></code>
