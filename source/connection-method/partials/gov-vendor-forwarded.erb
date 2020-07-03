@@ -8,7 +8,8 @@ A list that details hops over the internet between services that terminate Trans
 
 * The for field must be the public IP address of the request sender. For the first hop, this is the public IP address of the client. For subsequent hops, it is the public IP address of the intermediate server.
 
-* Each key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs, ampersands and commas).
+* Each key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1">
+  percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs, ampersands and commas).
 
 * Do not include hops within a private network
 
@@ -20,7 +21,7 @@ A simple client and server request.
 
 2. The vendor server with the public IP address 203.0.113.6  receives the request and forwards it to HMRC.
 
-Then, the header should look like this:
+The header should look like this:
 
 <pre><code>Gov-Vendor-Forwarded: by=203.0.113.6&for=198.51.100.0</code></pre>
 
@@ -38,6 +39,6 @@ Make sure <code>by</code> and for <code>fields</code> are added for every hop wi
 
 4. Vendor server 2, on public IP address  176.30.57.118,  receives the request and forwards it to HMRC
 
-Then, the header should look like this:
+The header should look like this:
 
 <pre><code>Gov-Vendor-Forwarded: by=2001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334&for=198.51.100.0,by=203.0.113.6&for=2001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334,by=176.30.57.118&for=203.0.113.6</code></pre>

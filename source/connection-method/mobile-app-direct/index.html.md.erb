@@ -1,11 +1,11 @@
 ---
-title: Desktop application direct
+title: Mobile application direct
 hide_in_navigation: true
 weight: 21
 description: Page description for search engines
 ---
 
-# Desktop application direct
+# Mobile application direct
 
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -16,13 +16,13 @@ description: Page description for search engines
 </div>
 
 
-<%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'DESKTOP_APP_DIRECT' } %>
+<%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'MOBILE_APP_DIRECT' } %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/device-id' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
-<%= partial 'connection-method/partials/user-ids', :locals => { :connection_method => 'DESKTOP_APP_DIRECT' } %>
+<%= partial 'connection-method/partials/user-ids' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/timezone' %>

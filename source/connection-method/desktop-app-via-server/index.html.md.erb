@@ -1,11 +1,11 @@
 ---
-title: Desktop application direct
+title: Desktop application via server
 hide_in_navigation: true
 weight: 21
 description: Page description for search engines
 ---
 
-# Desktop application direct
+# Desktop application via server
 
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -15,14 +15,21 @@ description: Page description for search engines
   </strong>
 </div>
 
+Where multiple services manage your intermediary servers, headers must contain data from all services.
 
-<%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'DESKTOP_APP_DIRECT' } %>
+<%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'DESKTOP_APP_VIA_SERVER' } %>
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<%= partial 'connection-method/partials/public-ips' %>
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<%= partial 'connection-method/partials/public-port' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/device-id' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
-<%= partial 'connection-method/partials/user-ids', :locals => { :connection_method => 'DESKTOP_APP_DIRECT' } %>
+<%= partial 'connection-method/partials/user-ids' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/timezone' %>
@@ -50,4 +57,10 @@ description: Page description for search engines
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/gov-vendor-license-id' %>
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<%= partial 'connection-method/partials/gov-vendor-public-ip' %>
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<%= partial 'connection-method/partials/gov-vendor-forwarded' %>
 <hr class="govuk-section-break govuk-section-break--visible">
