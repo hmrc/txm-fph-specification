@@ -1,0 +1,16 @@
+### Gov-Vendor-License-IDs
+
+A key-value data structure of hashed license keys relating to the vendor software initiating the API request on the originating device.
+
+* Use this format:<br>
+<code><software-name>=<hashed-license-value>&<software-name-2>=<hashed-license-value-2>& …</code>
+
+* To keep consistency in the values submitted, use the same hashing function.
+
+* Every key and value must be percent encoded. Do not percent encode separators (equal signs and ampersands).
+
+* If there are no licenses on the originating device, you will not be able to collect a value. You need to check what to do about missing data.
+
+<strong>Example</strong>
+
+<pre><code>Gov-Vendor-License-IDs: my%20licensed%20software=8D7963490527D33716835EE7C195516D5E562E03B224E9B359836466EE40CDE1</code></pre>

@@ -1,0 +1,48 @@
+### Gov-Client-User-IDs
+
+A key-value data structure containing user identifiers.
+
+* The keys should indicate accounts the user holds
+
+* Additional fields should contain the user’s identifiers with the vendor services involved in the request.
+
+<% if locals[:show_dynamic_content] %>
+* The os field should contain the identifier of the user signed in on the originating device.
+
+* Web applications do not usually provide the os field as browsers do not expose this information. If there is an os field, check your correct connection method.
+<% end %>
+
+* Every key and value must be percent encoded. Do not percent encode separators (equal signs and ampersands).
+
+<% if locals[:connection_method] == 'DESKTOP_APP_VIA_SERVER' %>
+<strong>Examples</strong>
+
+If there is 1 vendor application involved in handling the request:
+
+<pre><code>Gov-Client-User-IDs: os=domain%5Calice&my-application-account=alice_account_id</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'DESKTOP_APP_VIA_SERVER' %>
+If the request passes through 2 vendor applications:
+
+<pre><code>Gov-Client-User-IDs: os=domain%5Calice&my-application=alice_account_id&my-secondary-application=alice_secondary_account_id</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'DESKTOP_APP_DIRECT' %>
+<strong>Example</strong>
+
+If no vendor accounts are involved:
+
+<pre><code>Gov-Client-User-IDs: os=user123</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'BATCH_PROCESS_DIRECT' %>
+<strong>Example</strong>
+
+If no user devices are involved and the originating device is the batch server:
+
+<pre><code>Gov-Client-User-IDs: os=user123</code></pre>
+<% end %>
