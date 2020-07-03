@@ -1,15 +1,15 @@
 ### Gov-Vendor-License-IDs
 
-A key-value data structure of hashed license keys relating to the vendor software initiating the API request on the originating device.
+A key-value data structure of hashed license keys relating to the vendor software initiating the API request on the <a href="/connection-method/#what-is-your-originating-device">originating device</a>.
 
 * Use this format:<br>
 <code><software-name>=<hashed-license-value>&<software-name-2>=<hashed-license-value-2>& …</code>
 
 * To keep consistency in the values submitted, use the same hashing function.
 
-* Every key and value must be percent encoded. Do not percent encode separators (equal signs and ampersands).
+* Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).
 
-* If there are no licenses on the originating device, you will not be able to collect a value. You need to check what to do about missing data.
+* If there are no licenses on the <a href="/connection-method/#what-is-your-originating-device">originating device</a>, you will not be able to collect a value. You need to <a href="/getting-it-right/#missing-header-data">check what to do about missing data</a>.
 
 <strong>Example</strong>
 

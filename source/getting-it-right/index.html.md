@@ -56,7 +56,7 @@ In some exceptional cases, you might not be able to collect a value due to restr
 * operating system or platform restrictions beyond your reasonable control
 * security measures beyond your reasonable control
 
-For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the operating system of the originating device has no concept of user accounts.
+For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the operating system of the <a href="/connection-method/#what-is-your-originating-device">originating device</a> has no concept of user accounts.
 
 <div class="govuk-inset-text">
 You can only submit a header with an empty value or omit it entirely in exceptional cases. We may contact you for more details.

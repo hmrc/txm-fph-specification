@@ -8,35 +8,36 @@ A list that details hops over the internet between services that terminate Trans
 
 * The for field must be the public IP address of the request sender. For the first hop, this is the public IP address of the client. For subsequent hops, it is the public IP address of the intermediate server.
 
-* Each key and value must be percent encoded. Do not percent encode separators (equal signs, ampersands and commas).
+* Each key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs, ampersands and commas).
 
 * Do not include hops within a private network
 
-Example 1
+<strong>Example 1</strong>
 
 A simple client and server request.
 
-A web client with the public IP address 198.51.100.0 makes a request to a vendor server
+1. A web client with the public IP address 198.51.100.0 makes a request to a vendor server
 
+2. The vendor server with the public IP address 203.0.113.6  receives the request and forwards it to HMRC.
 
-The vendor server with the public IP address 203.0.113.6  receives the request and forwards it to HMRC.
 Then, the header should look like this:
-Gov-Vendor-Forwarded: by=203.0.113.6&for=198.51.100.0
 
-Example 2
+<pre><code>Gov-Vendor-Forwarded: by=203.0.113.6&for=198.51.100.0</code></pre>
+
+<strong>Example 2</strong>
+
 The request passes through a Web Application Firewall (WAF) and multiple servers belonging to the vendor.
 
-Make sure by and for fields are added for every hop within the request.
+Make sure <code>by</code> and for <code>fields</code> are added for every hop within the request.
 
-A web client, on public IP address 198.51.100.0, makes a request to a WAF
+1. A web client, on public IP address 198.51.100.0, makes a request to a WAF
 
+2. The WAF, on public IP address 2001:0db8:85a3:0000:0000:8a2e:0370:7334 , receives the request and forwards it to vendor server 1
 
-The WAF, on public IP address 2001:0db8:85a3:0000:0000:8a2e:0370:7334 , receives the request and forwards it to vendor server 1
+3. Vendor server 1, on public IP address 203.0.113.6, receives the request and forwards it to vendor server 2
 
+4. Vendor server 2, on public IP address  176.30.57.118,  receives the request and forwards it to HMRC
 
-Vendor server 1, on public IP address 203.0.113.6, receives the request and forwards it to vendor server 2
-
-
-Vendor server 2, on public IP address  176.30.57.118,  receives the request and forwards it to HMRC
 Then, the header should look like this:
-Gov-Vendor-Forwarded: by=2001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334&for=198.51.100.0,by=203.0.113.6&for=2001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334,by=176.30.57.118&for=203.0.113.6
+
+<pre><code>Gov-Vendor-Forwarded: by=2001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334&for=198.51.100.0,by=203.0.113.6&for=2001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334,by=176.30.57.118&for=203.0.113.6</code></pre>

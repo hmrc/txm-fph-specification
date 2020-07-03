@@ -7,12 +7,12 @@ A key-value data structure containing user identifiers.
 * Additional fields should contain the user’s identifiers with the vendor services involved in the request.
 
 <% if locals[:show_dynamic_content] %>
-* The os field should contain the identifier of the user signed in on the originating device.
+* The os field should contain the identifier of the user signed in on the <a href="/connection-method/#what-is-your-originating-device">originating device</a>.
 
 * Web applications do not usually provide the os field as browsers do not expose this information. If there is an os field, check your correct connection method.
 <% end %>
 
-* Every key and value must be percent encoded. Do not percent encode separators (equal signs and ampersands).
+* Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).
 
 <% if locals[:connection_method] == 'DESKTOP_APP_VIA_SERVER' %>
 <strong>Examples</strong>
@@ -42,7 +42,7 @@ If no vendor accounts are involved:
 <% if locals[:connection_method] == 'BATCH_PROCESS_DIRECT' %>
 <strong>Example</strong>
 
-If no user devices are involved and the originating device is the batch server:
+If no user devices are involved and the <a href="/connection-method/#what-is-your-originating-device">originating device</a> is the batch server:
 
 <pre><code>Gov-Client-User-IDs: os=user123</code></pre>
 <% end %>
