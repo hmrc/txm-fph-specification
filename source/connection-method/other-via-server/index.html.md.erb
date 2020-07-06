@@ -1,11 +1,11 @@
 ---
-title: Web application via server
+title: Other via server
 hide_in_navigation: true
 weight: 21
 description: Page description for search engines
 ---
 
-# Web application via server
+# Other via server
 
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -17,7 +17,7 @@ description: Page description for search engines
 
 Where multiple services manage your intermediary servers, headers must contain data from all services.
 
-<%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+<%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'OTHER_VIA_SERVER' } %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/public-ips' %>
@@ -38,19 +38,10 @@ Where multiple services manage your intermediary servers, headers must contain d
 <%= partial 'connection-method/partials/local-ips' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
-<%= partial 'connection-method/partials/screens' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/window-size' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/browser-plugins' %>
+<%= partial 'connection-method/partials/mac-address' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/user-agent' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/browser-do-not-track' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/multi-factor' %>
