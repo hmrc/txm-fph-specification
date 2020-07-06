@@ -46,7 +46,7 @@ description: Page description for search engines
 <%= partial 'connection-method/partials/multi-factor' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
-<%= partial 'connection-method/partials/vendor-version' %>
+<%= partial 'connection-method/partials/vendor-version', :locals => { :connection_method => 'DESKTOP_APP_DIRECT' }  %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/gov-vendor-license-id' %>
