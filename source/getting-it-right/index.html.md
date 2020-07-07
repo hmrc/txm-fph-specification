@@ -10,9 +10,9 @@ Version 2.9 issued 5 March 2020
 
 ## Send data in the correct format
 
-Header data contents must be submitted using the US-ASCII character set, with other characters <a href="https://tools.ietf.org/html/rfc3986#section-2.1"> percent encoded (opens in a new tab)</a>. 
+Header data contents must be submitted using the US-ASCII character set, with other characters <a href="https://tools.ietf.org/html/rfc3986#section-2.1"> percent encoded (opens in a new tab)</a>.
 
-Each header has additional formatting requirements.  
+Each header has additional formatting requirements. To check a header format, you need to <a href="/connection-method/">select your connection method</a>.
 
 
 ### Key-value encoding
