@@ -11,5 +11,5 @@ Before you submit any headers, check that your data meets the requirements and i
 You can use the Test API during initial development and as part of your quality assurance checks.
 
 <div>
-    <button class="govuk-button" type="submit">Go to the Test API</button>
+    <a class="govuk-button tdq-button" href="/api-documentation/docs/api/service/txm-fph-validator-api">Go to the Test API</a>
 </div>

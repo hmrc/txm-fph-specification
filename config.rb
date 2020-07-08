@@ -7,8 +7,6 @@ require "govuk_tech_docs/table_of_contents/heading"
 require "govuk_tech_docs/table_of_contents/headings_builder"
 require 'govuk_tech_docs/tech_docs_html_renderer'
 
-require 'middleman-core/logger';
-
 configure :build do
   base_path = ENV['BASE_PATH'] || '/' # Note: please ensure BASE_PATH ends with a trailing '/'
 
@@ -26,7 +24,6 @@ configure :build do
            else
              config[:http_prefix] + "/"
            end
-      logger.warn("EJ multi_page_table_of_contents")
       resources = resources
       .select { |r| r.path.end_with?(".html") && (r.parent.nil? || r.parent.url == home_url) }
       .sort_by { |r| [r.data.weight ? 0 : 1, r.data.weight || 0] }

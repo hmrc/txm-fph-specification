@@ -1,6 +1,6 @@
 ### Gov-Client-Local-IPs
 
-A list of all local IPv4 and IPv6 addresses available to the <a href="/connection-method/#what-is-your-originating-device">originating device</a>.
+A list of all local IPv4 and IPv6 addresses available to the <a href="../#originating-device">originating device</a>.
 
 <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
 * In some cases, it will be difficult to get these values but your application must try to obtain them
@@ -8,7 +8,7 @@ A list of all local IPv4 and IPv6 addresses available to the <a href="/connectio
 * You must submit the values obtained even if they are obfuscated
 <% end %>
 
-* Every IPv6 value in the list must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1">percent encoded (opens in a new tab)</a>. Do not percent encode separators (commas).
+* Every IPv6 value in the list must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode separators (commas).
 
 <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
 * You may be able to use WebRTC to discover local device IPs

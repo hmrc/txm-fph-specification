@@ -10,9 +10,9 @@ Version 2.9 issued 14 July 2020
 
 ## Send data in the correct format
 
-Header data contents must be submitted using the US-ASCII character set, with other characters <a href="https://tools.ietf.org/html/rfc3986#section-2.1"> percent encoded (opens in a new tab)</a>.
+Header data contents must be submitted using the US-ASCII character set, with other characters <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer"> percent encoded (opens in a new tab)</a>.
 
-Each header has additional formatting requirements. To check a header format, you need to <a href="/connection-method/">select your connection method</a>.
+Each header has additional formatting requirements. To check a header format, you need to <a href="../connection-method/">select your connection method</a>.
 
 
 ### Key-value encoding
@@ -23,7 +23,7 @@ Whenever a header contains a key-value data structure, you must use this format:
 
 Whenever a key is applicable but has no applicable value, you can omit the key-value pair or include the key with an empty value.
 
-Keys and values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1"> percent encoded (opens in a new tab)</a>.
+Keys and values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer"> percent encoded (opens in a new tab)</a>.
 
 Key-value pairs can be submitted in any order.
 
@@ -34,7 +34,7 @@ Whenever a header contains a list, you must use this format:
 
 <code>&lt;value-1&gt;,&lt;value-2&gt;,&hellip;</code>
 
-Values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1"> percent encoded (opens in a new tab)</a>.
+Values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer"> percent encoded (opens in a new tab)</a>.
 
 Values must not be empty.
 
@@ -56,10 +56,10 @@ In exceptional cases you might not be able to collect a value due to restriction
 * operating system or platform restrictions
 * security measures
 
-For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the <a href="/connection-method/#what-is-your-originating-device">originating device</a> does not have user accounts.
+For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the <a href="../connection-method/#originating-device">originating device</a> does not have user accounts.
 
 <div class="govuk-inset-text">
-You must <a href="/#contact-us">contact us</a> explaining why you are unable to submit a header.
+You must <a href="#contact-us">contact us</a> explaining why you are unable to submit a header.
 </div>
 
 If you leave a header empty, do not submit any value including null values. These examples are not valid:
