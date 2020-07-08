@@ -51,7 +51,7 @@ Values must not be empty.
 
 Most organisations are able to send all header data required for their connection method.
 
-In exceptional cases you might not be able to collect a value due to restrictions beyond your reasonable control, such as:
+In exceptional cases you might be unable to collect a value due to restrictions beyond your reasonable control, such as:
 
 * operating system or platform restrictions
 * security measures
@@ -59,7 +59,7 @@ In exceptional cases you might not be able to collect a value due to restriction
 For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the <a href="../connection-method/#originating-device">originating device</a> does not have user accounts.
 
 <div class="govuk-inset-text">
-You must <a href="#contact-us">contact us</a> explaining why you are unable to submit a header.
+If you are unable to submit a header, you must <a href="#contact-us">contact us</a> to explain why. Make sure you include full details of the restrictions.
 </div>
 
 If you leave a header empty, do not submit any value including null values. These examples are not valid:
