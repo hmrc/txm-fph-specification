@@ -6,7 +6,7 @@ description: Page description for search engines
 
 # Getting it right
 
-Version 2.9 issued 5 March 2020
+Version 2.9 issued 14 July 2020
 
 ## Send data in the correct format
 
@@ -51,15 +51,15 @@ Values must not be empty.
 
 Most organisations are able to send all header data required for their connection method.
 
-In some exceptional cases, you might not be able to collect a value due to restrictions beyond your reasonable control.
+In exceptional cases you might not be able to collect a value due to restrictions beyond your reasonable control, such as:
 
-* operating system or platform restrictions beyond your reasonable control
-* security measures beyond your reasonable control
+* operating system or platform restrictions
+* security measures
 
-For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the operating system of the <a href="/connection-method/#what-is-your-originating-device">originating device</a> has no concept of user accounts.
+For example, an application connecting directly to HMRC might not be able to submit a username for Gov-Client-User-IDs if the <a href="/connection-method/#what-is-your-originating-device">originating device</a> does not have user accounts.
 
 <div class="govuk-inset-text">
-You can only submit a header with an empty value or omit it entirely in exceptional cases. We may contact you for more details.
+You must <a href="/#contact-us">contact us</a> explaining why you are unable to submit a header.
 </div>
 
 If you leave a header empty, do not submit any value including null values. These examples are not valid:
@@ -78,4 +78,6 @@ If you use or plan to use third-party software and libraries, make sure you can 
 
 ## Contact us
 
-If you need to contact us, email SDSTeam@hmrc.gov.uk
+You can send an email to SDSTeam@hmrc.gov.uk
+
+If you are explaining an exceptional case that means you cannot collect a value, include as many details as you can.
