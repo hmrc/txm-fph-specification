@@ -2,11 +2,11 @@
 
 A list that details hops over the internet between services that terminate Transport Layer Security (TLS).
 
-* For each hop over the internet, a key-value data structure with a by and for field must be appended to the list
+* For each hop over the internet, a key-value data structure with a <code>by</code> and <code>for</code> field must be appended to the list
 
-* The by field must be the public IP address that the server received the request on
+* The <code>by</code> field must be the public IP address that the server received the request on
 
-* The for field must be the public IP address of the request sender. For the first hop, this is the public IP address of the client. For subsequent hops, it is the public IP address of the intermediate server.
+* The <code>for</code> field must be the public IP address of the request sender. For the first hop, this is the public IP address of the client. For subsequent hops, it is the public IP address of the intermediate server.
 
 * Each key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">
   percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs, ampersands and commas).
@@ -29,7 +29,7 @@ The header should look like this:
 
 The request passes through a Web Application Firewall (WAF) and multiple servers belonging to the vendor.
 
-Make sure <code>by</code> and for <code>fields</code> are added for every hop within the request.
+Make sure <code>by</code> and <code>for</code> fields are added for every hop within the request.
 
 1. A web client, on public IP address 198.51.100.0, makes a request to a WAF
 

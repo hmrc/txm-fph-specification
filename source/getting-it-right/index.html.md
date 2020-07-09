@@ -65,9 +65,9 @@ If you are unable to submit a header, you must <a href="#contact-us">contact us<
 If you leave a header empty, do not submit any value including null values. These examples are not valid:
 
 <ul>
-  <li><span class="code--slim">Gov-Client-User-IDs: null</span></li>
-  <li><span class="code--slim">Gov-Client-User-IDs: nil</span></li>
-  <li><span class="code--slim">Gov-Client-User-IDs: undefined</span></li>
+  <li><code>Gov-Client-User-IDs: null</code></li>
+  <li><code>Gov-Client-User-IDs: nil</code></li>
+  <li><code>Gov-Client-User-IDs: undefined</code></li>
 </ul>
 
 
