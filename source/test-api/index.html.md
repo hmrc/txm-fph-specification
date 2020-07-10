@@ -1,7 +1,7 @@
 ---
 title: Use the Test API - Fraud prevention
 weight: 40
-description: Page description for search engines
+description: You need to send header data to HMRC when you use our APIs. Use the Fraud Prevention Test API to check data before you submit it.
 ---
 
 # Use the Test API
