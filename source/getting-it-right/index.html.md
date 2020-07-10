@@ -78,6 +78,6 @@ If you use or plan to use third-party software and libraries, make sure you can 
 
 ## Contact us
 
-You can send an email to SDSTeam@hmrc.gov.uk
+You can send an email to <a href="mailto:SDSTeam@hmrc.gov.uk">SDSTeam@hmrc.gov.uk</a>
 
 If you are explaining an exceptional case that means you cannot collect a value, include as many details as you can.

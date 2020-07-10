@@ -4,12 +4,12 @@ A key-value data structure containing user identifiers.
 
 * The keys should indicate accounts the user holds
 
-* Additional fields should contain the user’s identifiers with the vendor services involved in the request.
+* Additional fields should contain the user’s identifiers with the vendor services involved in the request
+
+* The <code>os</code> field should contain the identifier of the user signed in on the <a href="../#originating-device">originating device</a>
 
 <% if locals[:show_dynamic_content] %>
-* The os field should contain the identifier of the user signed in on the <a href="../#originating-device">originating device</a>
-
-* Web applications do not usually provide the os field as browsers do not expose this information. If there is an os field, check your correct connection method.
+* Web applications do not usually provide the <code>os</code> field as browsers do not expose this information. If there is an <code>os</code> field, check your correct connection method.
 <% end %>
 
 * Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).
@@ -47,8 +47,6 @@ If no user devices are involved and the <a href="../#originating-device">origina
 
 <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
 <strong>Example</strong>
-
-You will not be able to submit an <code>os</code> value. You need to ...
 
 <pre><code>Gov-Client-User-IDs: My_Webapp_Software=user32a9757b3</code></pre>
 <% end %>
