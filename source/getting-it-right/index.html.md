@@ -12,7 +12,7 @@ Version 2.9 issued 14 July 2020
 
 Header data contents must be submitted using the US-ASCII character set, with other characters <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer"> percent encoded (opens in a new tab)</a>.
 
-Each header has additional formatting requirements. To check a header format, you need to <a href="../connection-method/">select your connection method</a>.
+Each header has additional formatting requirements. To check a header format, you need to <a href="../connection-method/" onclick="ga('send', 'event', 'On Page Navigation', 'Connection Method', 'Select your connection method');">select your connection method</a>.
 
 
 ### Key-value encoding
