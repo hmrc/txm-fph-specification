@@ -12,6 +12,57 @@ These fields should be submitted as a list of key-value data structures:
 
 <code>colour-depth</code> is the colour depth of the screen in bits
 
+<% if locals[:connection_method] == 'MOBILE_APP_DIRECT' %>
+<strong>Example</strong>
+
+<pre><code>gov-client-screens: width=375&height=812&scaling-factor=2&colour-depth=32</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'DESKTOP_APP_DIRECT' %>
 <strong>Example</strong>
 
 <pre><code>Gov-Client-Screens: width=1920&height=1080&scaling-factor=1&colour-depth=16,width=3000&height=2000&scaling-factor=1.25&colour-depth=16</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'MOBILE_APP_VIA_SERVER' %>
+<strong>Example</strong>
+
+<pre><code>gov-client-screens: width=375&height=812&scaling-factor=2&colour-depth=32</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'DESKTOP_APP_VIA_SERVER' %>
+<strong>Example</strong>
+
+<pre><code>Gov-Client-Screens: width=1920&height=1080&scaling-factor=1&colour-depth=16,width=3000&height=2000&scaling-factor=1.25&colour-depth=16</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
+<strong>Example</strong>
+
+<pre><code>Gov-Client-Screens: width=1920&height=1080&scaling-factor=1&colour-depth=16,width=3000&height=2000&scaling-factor=1.25&colour-depth=16</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'BATCH_PROCESS_DIRECT' %>
+<strong>Example</strong>
+
+<pre><code>Gov-Client-Screens: width=1920&height=1080&scaling-factor=1&colour-depth=16,width=3000&height=2000&scaling-factor=1.25&colour-depth=16</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'OTHER_DIRECT' %>
+<strong>Example</strong>
+
+<pre><code>Gov-Client-Screens: width=1920&height=1080&scaling-factor=1&colour-depth=16,width=3000&height=2000&scaling-factor=1.25&colour-depth=16</code></pre>
+<% end %>
+
+
+<% if locals[:connection_method] == 'OTHER_VIA_SERVER' %>
+<strong>Example</strong>
+
+<pre><code>Gov-Client-Screens: width=1920&height=1080&scaling-factor=1&colour-depth=16,width=3000&height=2000&scaling-factor=1.25&colour-depth=16</code></pre>
+<% end %>
