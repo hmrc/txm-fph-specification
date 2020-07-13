@@ -8,7 +8,9 @@ description: You need to send header data to HMRC when you use our APIs. Check t
 
 The header data you need to send depends on your software architecture. We refer to your architecture as a connection method.
 
-To find out what data you need to send, you must select your connection method. This depends on <a href="#direct-or-via-intermediary-servers">how your application connects</a> to HMRC and your <a href="#originating-device">originating device</a>.
+Your connection method depends on <a href="#direct-or-via-intermediary-servers">how your application connects</a> to HMRC and your <a href="#originating-device">originating device</a>.
+
+To find out what data you need to send, you must select your connection method.
 
 ## Select your connection method
 
@@ -50,14 +52,13 @@ Your application uses batch processes, connecting directly to HMRC.
 </details>
 
 
-### Direct or via intermediary servers
+### Connecting to HMRC
 
-Your application connects directly to HMRC or via intermediary servers. Select a direct connection method if your application connects directly to HMRC.
+If your application connects directly to HMRC, select a direct connection method.
 
-If your application does not connect directly to HMRC, you need to select a server connection method. This refers to intermediary servers that are part of your application domain and are in your control. It does not include third-party servers such as transport layers or internet providers.
+If your application does not connect directly to HMRC, select a server connection method. Only consider intermediary servers that are part of your application domain and are in your control. Do not include third-party servers such as transport layers or internet providers.
 
 Where multiple services manage your intermediary servers, headers must contain data from all services.
-
 
 ### Originating device
 
