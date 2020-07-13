@@ -1,7 +1,7 @@
 ---
 title: Getting it right - Fraud prevention
 weight: 50
-description: You need to send header data to HMRC when you use our APIs. Check the fraud prevention specification. Make sure you send data in the right format and find out what to do if you cannot collect certain data.
+description: You need to send header data to HMRC when you use our APIs. Check the fraud prevention specification. Check the formatting requirements and how to contact us about missing data.
 ---
 
 # Getting it right
@@ -51,7 +51,7 @@ Values must not be empty.
 
 Most organisations are able to send all header data required for their connection method.
 
-In exceptional cases you might be unable to collect a value due to restrictions beyond your reasonable control, such as:
+In exceptional cases you may be unable to collect a value due to restrictions beyond your reasonable control, such as:
 
 * operating system or platform restrictions
 * security measures
@@ -78,6 +78,6 @@ If you use or plan to use third-party software and libraries, make sure you can 
 
 ## Contact us
 
-You can send an email to <a href="mailto:SDSTeam@hmrc.gov.uk">SDSTeam@hmrc.gov.uk</a>
+You can send an email to <a href="mailto:SDSTeam@hmrc.gov.uk">SDSTeam@hmrc.gov.uk</a>.
 
 If you are explaining an exceptional case that means you cannot collect a value, include as many details as you can.
