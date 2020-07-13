@@ -1,6 +1,6 @@
 ---
 title: Getting it right - Fraud prevention
-weight: 50
+weight: 40
 description: You need to send header data to HMRC when you use our APIs. Check the fraud prevention specification. Check the formatting requirements and how to contact us about missing data.
 ---
 
