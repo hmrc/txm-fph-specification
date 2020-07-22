@@ -23,7 +23,7 @@ Whenever a header contains a key-value data structure, you must use this format:
 
 Whenever a key is applicable but has no applicable value, you can omit the key-value pair or include the key with an empty value.
 
-Keys and values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer" onclick="ga('send', 'event', 'On Page Navigation', 'Send data in the correct format', 'Percent encoded 2');"> percent encoded (opens in a new tab)</a>.
+Keys and values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer" onclick="ga('send', 'event', 'On Page Navigation', 'Key-value encoding', 'Percent encoded 2');"> percent encoded (opens in a new tab)</a>.
 
 Key-value pairs can be submitted in any order.
 
@@ -34,7 +34,7 @@ Whenever a header contains a list, you must use this format:
 
 <code>&lt;value-1&gt;,&lt;value-2&gt;,&hellip;</code>
 
-Values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer" onclick="ga('send', 'event', 'On Page Navigation', 'Send data in the correct format', 'Percent encoded 3');"> percent encoded (opens in a new tab)</a>.
+Values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer" onclick="ga('send', 'event', 'On Page Navigation', 'List encoding', 'Percent encoded 3');"> percent encoded (opens in a new tab)</a>.
 
 Values must not be empty.
 
