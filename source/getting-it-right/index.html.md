@@ -62,14 +62,7 @@ For example, an application connecting directly to HMRC might not be able to sub
 If you are unable to submit a header, you must <a href="#contact-us" onclick="ga('send', 'event', 'On Page Navigation', 'Missing header data', 'Contact us');">contact us</a> to explain why. Make sure you include full details of the restrictions.
 </div>
 
-If you leave a header empty, do not submit any value including null values. These examples are not valid:
-
-<ul>
-  <li><code>Gov-Client-User-IDs: null</code></li>
-  <li><code>Gov-Client-User-IDs: nil</code></li>
-  <li><code>Gov-Client-User-IDs: undefined</code></li>
-</ul>
-
+In these cases, you can submit a header with an empty value. Do not include any value, for example <code>null</code>, <code>undefined</code> or forward slash.
 
 ### Using third-party software and libraries
 
