@@ -62,10 +62,8 @@ Where multiple services manage your intermediary servers, headers must contain d
 
 ### Originating device
 
-Originating device means the device that initiates an action.
+Originating device means the device that initiates an action, for example a VAT return. In most connection methods, it is usually the physical device a person uses to initiate a request.
 
-In most connection methods, it is usually the physical device a person uses to initiate a request.
+In desktop application direct, or desktop application via server, the originating device might be a hosted desktop environment accessed remotely by the user.
 
-<p>In batch process direct, it might be a vendor’s server.</p>
-
-<p>In desktop application direct, or desktop application via server, it might be a hosted desktop environment accessed remotely by the user.</p>
+If actions initiated by users are stored on a server and sent in batches, the originating device is the user's device and not the server. You must only select batch process direct as a connection method when your users do not initiate any actions.
