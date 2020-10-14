@@ -74,3 +74,15 @@ If you use or plan to use third-party software and libraries, make sure you can 
 You can send an email to <a href="mailto:SDSTeam@hmrc.gov.uk" onclick="ga('send', 'event', 'On Page Navigation', 'Contact us', 'SDST');">SDSTeam@hmrc.gov.uk</a>.
 
 If you are explaining an exceptional case that means you cannot collect a value, include as many details as you can.
+
+## Change log
+
+### Version 3.0
+
+16 November 2020
+
+What changed:
+
+* Gov-Vendor-Product-Name required for all connection methods
+* Gov-Vendor-Public-IP-Timestamp required with Gov-Vendor-Public-IP
+* Gov-Client-Local-IPs-Timestamp required with Gov-Client-Local-IPs
