@@ -6,7 +6,8 @@ description: You need to send header data to HMRC when you use our APIs. Check t
 
 # Getting it right
 
-Version 2.9 issued 14 July 2020
+Version 3.0 issued 16 November 2020 <br/>
+<a href="#change-log" onclick="ga('send', 'event', 'On Page Navigation', 'Getting it right', 'Change log');">Check what has changed</a>
 
 ## Send data in the correct format
 
