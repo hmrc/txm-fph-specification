@@ -40,6 +40,14 @@ Values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target=
 Values must not be empty.
 
 
+## How we check data
+
+We monitor API calls from all applications. If data submitted by your application has errors or warnings, we'll email a report with the details. We email reports once a month. 
+
+It is important that the right people in your organisation receive the reports. You'll need to check who that is and make sure they are registered on HMRC's Developer Hub.  
+
+To help avoid errors and warnings, <a href="../../test-api/#use-the-test-api">use the Test API</a>. 
+
 ## Missing header data
 
 <div class="govuk-warning-text">
