@@ -46,7 +46,7 @@ We monitor API calls from all applications. If data submitted by your applicatio
 
 It is important that the right people in your organisation receive the reports. You'll need to check who that is and make sure they are registered on HMRC's Developer Hub.  
 
-To help avoid errors and warnings, <a href="../../test-api/#use-the-test-api">use the Test API</a>. 
+To help avoid errors and warnings, <a href="../test-api/#use-the-test-api">use the Test API</a>. 
 
 ## Missing header data
 
