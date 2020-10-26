@@ -2,6 +2,12 @@
 
 A list of all local IPv4 and IPv6 addresses available to the <a href="../#originating-device">originating device</a>.
 
+<% if locals[:connection_method].end_with? '_VIA_SERVER' %>
+* Values must be collected immediately before each request is sent by the client to the backend server
+<% else %>
+* Values must be collected immediately before each request is sent to the API
+<% end %>
+
 <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
 * In some cases, it will be difficult to get these values but your application must try to obtain them
 
