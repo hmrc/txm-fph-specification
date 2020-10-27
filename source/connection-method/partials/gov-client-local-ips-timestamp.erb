@@ -1,0 +1,16 @@
+### Gov-Client-Local-IPs-Timestamp
+
+A timestamp to show when Gov-Client-Local-IPs is collected.
+
+<% if locals.has_key?(:connection_method) && locals[:connection_method].end_with?('_VIA_SERVER') %>
+* Collect the timestamp immediately before the client makes the request to the backend server that triggers a request to the API
+* The value must not be altered before being sent to the API
+<% else %>
+* Collect the timestamp immediately before the client makes the request to the API
+<% end %>
+
+* Submit a UTC timestamp in the format <code>yyyy-MM-ddThh:mm:ss.sssZ</code>. You must include seconds and milliseconds.
+
+<strong>Example</strong>
+
+<pre><code>Gov-Client-Local-IPs-Timestamp: 2020-09-21T10:30:05.123Z</code></pre>
