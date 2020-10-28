@@ -20,7 +20,10 @@ Where multiple services manage your intermediary servers, headers must contain d
 <%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'MOBILE_APP_VIA_SERVER' } %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
-<%= partial 'connection-method/partials/public-ips' %>
+<%= partial 'connection-method/partials/public-ip' %>
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<%= partial 'connection-method/partials/public-ip-timestamp' %>
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <%= partial 'connection-method/partials/public-port' %>
