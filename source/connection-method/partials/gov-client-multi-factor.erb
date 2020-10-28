@@ -1,0 +1,33 @@
+<li>
+  <h3 id="gov-client-multi-factor">Gov-Client-Multi-Factor</h3>
+
+  <p>A list of key-value data structures containing details of the multi-factor authentication (MFA) statuses related to the API call.</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>This relates to users accessing your software, not users granting authority for your software to access their data</li>
+
+    <li>If you authenticate with username and password only, you will not be able to collect a value. You need to <a href="../../getting-it-right/#missing-header-data">check what to do about missing data</a>.</li>
+
+    <li>Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode the separators (equal signs, ampersands and commas).</li>
+  </ul>
+
+  <p><strong>Fields for each key-value data structure</strong></p>
+
+  <p><code>type</code> is a tag describing the MFA method being used. The possible values are:</p>
+
+  <ul class="gouk-list govuk-list--bullet">
+    <li><code>TOTP</code> the MFA was performed by accepting a time-based one-time password code</li>
+
+    <li><code>AUTH_CODE</code> the MFA was performed by sending an authorisation code to the user in some out-of-band channel, for example, by email or by SMS</li>
+
+    <li><code>OTHER</code> a different MFA method was used than the available values</li>
+
+    <li><code>timestamp</code> is a UTC timestamp recording the time of the last successful prompt for this factor. As a minimum, use this format <code>yyyy-MM-ddThh:mmZ</code>. You can include seconds and milliseconds.</li>
+
+    <li><code>unique-reference</code> identifies a single factor. For example, a salted-and-hashed phone number used for SMS, or an identifier linked to a TOTP secret, but not the secret itself. Use the same hashing function consistently so that this can be recognised across API calls.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Client-Multi-Factor: type=AUTH_CODE&timestamp=2017-04-21T13%3A23Z&unique-reference=c672b8d1ef56ed28,type=TOTP&timestamp=2017-05-19T13%3A10Z&unique-reference=ac73430ffdfd9</code></pre>
+</li>

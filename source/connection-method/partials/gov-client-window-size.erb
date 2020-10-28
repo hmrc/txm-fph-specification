@@ -1,0 +1,15 @@
+<li>
+  <h3 id="gov-client-window-size">Gov-Client-Window-Size</h3>
+
+  <p>The number of pixels of the window on the <a href="../#originating-device">originating device</a>.</p>
+
+  <p>This should be displayed as a key-value data structure with <code>width</code> and <code>height</code> fields.</p>
+
+  <p><strong>Example</strong></p>
+
+  <% if locals.has_key?(:connection_method) && locals[:connection_method].start_with?('MOBILE_') %>
+  <pre><code>Gov-Client-Window-Size: width=375&height=812</code></pre>
+  <% else %>
+  <pre><code>Gov-Client-Window-Size: width=1256&height=803</code></pre>
+  <% end %>
+</li>

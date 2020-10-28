@@ -1,0 +1,26 @@
+<li>
+  <h3 id="gov-vendor-version">Gov-Vendor-Version</h3>
+
+  <p>A key-value data structure of versions of your software involved in handling a request.</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      Use this format: <br>
+      <code>&lt;software-name&gt;=&lt;version-number&gt;&&lt;software-name-2&gt;=&lt;version-number-2&gt;& …</code>
+    </li>
+
+    <li>Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <% if locals.has_key?(:connection_method) && locals[:connection_method].end_with?('_DIRECT') %>
+  <pre><code>Gov-Vendor-Version: my-application=1.6.0</code></pre>
+  <% elsif locals[:connection_method] == 'MOBILE_APP_VIA_SERVER' %>
+  <pre><code>Gov-Vendor-Version: my-mobile-app=2.2.2&my-serverside-code=v3.8</code></pre>
+  <% elsif locals[:connection_method] == 'DESKTOP_APP_VIA_SERVER' %>
+  <pre><code>Gov-Vendor-Version: my-desktop-app=2.2.2&my-serverside-code=v3.8</code></pre>
+  <% else %>
+  <pre><code>Gov-Vendor-Version: my-frontend-app=2.2.2&my-serverside-code=v3.8</code></pre>
+  <% end %>
+</li>

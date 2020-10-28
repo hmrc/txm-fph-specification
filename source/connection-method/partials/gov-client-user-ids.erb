@@ -1,0 +1,78 @@
+<li>
+  <h3 id="gov-client-user-ids">Gov-Client-User-IDs</h3>
+
+  <p>A key-value data structure containing user identifiers.</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>The keys should indicate accounts the user holds</li>
+
+    <li>Additional fields should contain the user’s identifiers with the vendor services involved in the request</li>
+
+    <% if locals[:connection_method] != 'WEB_APP_VIA_SERVER' %>
+    <li>The <code>os</code> field should contain the identifier of the user signed in on the <a href="../#originating-device">originating device</a></li>
+    <% end %>
+
+    <li>Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).</li>
+  </ul>
+
+  <% if locals[:connection_method] == 'DESKTOP_APP_VIA_SERVER' %>
+  <p><strong>Examples</strong></p>
+
+  <p>If there is 1 vendor application involved in handling the request:</p>
+
+  <pre><code>Gov-Client-User-IDs: os=domain%5Calice&my-application-account=alice_account_id</code></pre>
+
+  <p>If the request passes through 2 vendor applications:</p>
+
+  <pre><code>Gov-Client-User-IDs: os=domain%5Calice&my-application=alice_account_id&my-secondary-application=alice_secondary_account_id</code></pre>
+  <% end %>
+
+
+  <% if locals[:connection_method] == 'DESKTOP_APP_DIRECT' %>
+  <p><strong>Example</strong></p>
+
+  <p>If no vendor accounts are involved:</p>
+
+  <pre><code>Gov-Client-User-IDs: os=user123</code></pre>
+  <% end %>
+
+
+  <% if locals[:connection_method] == 'BATCH_PROCESS_DIRECT' %>
+  <p><strong>Example</strong></p>
+
+  <p>If no user devices are involved and the <a href="../#originating-device">originating device</a> is the batch server:</p>
+
+  <pre><code>Gov-Client-User-IDs: os=user123</code></pre>
+
+  <% end %>
+
+  <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Client-User-IDs: My_Webapp_Software=user32abc7b3</code></pre>
+  <% end %>
+
+  <% if locals[:connection_method] == 'MOBILE_APP_DIRECT' %>
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Client-User-Ids: os=user123</code></pre>
+  <% end %>
+
+  <% if locals[:connection_method] == 'MOBILE_APP_VIA_SERVER' %>
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Client-User-Ids: os=user123&my-application=alice_account_id</code></pre>
+  <% end %>
+
+  <% if locals[:connection_method] == 'OTHER_DIRECT' %>
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Client-User-Ids: os=user123</code></pre>
+  <% end %>
+
+  <% if locals[:connection_method] == 'OTHER_VIA_SERVER' %>
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Client-User-Ids: os=user123&my-application=alice_account_id</code></pre>
+  <% end %>
+</li>

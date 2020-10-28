@@ -1,16 +1,20 @@
-### Gov-Client-Local-IPs-Timestamp
+<li>
+  <h3 id="gov-client-local-ips-timestamp">Gov-Client-Local-IPs-Timestamp</h3>
 
-A timestamp to show when Gov-Client-Local-IPs is collected.
+  <p>A timestamp to show when Gov-Client-Local-IPs is collected.</p>
 
-<% if locals.has_key?(:connection_method) && locals[:connection_method].end_with?('_VIA_SERVER') %>
-* Collect the timestamp immediately before the client makes the request to the backend server that triggers a request to the API
-* The value must not be altered before being sent to the API
-<% else %>
-* Collect the timestamp immediately before the client makes the request to the API
-<% end %>
+  <ul class="govuk-list govuk-list--bullet">
+    <% if locals.has_key?(:connection_method) && locals[:connection_method].end_with?('_VIA_SERVER') %>
+    <li>Collect the timestamp immediately before the client makes the request to the backend server that triggers a request to the API</li>
+    <li>The value must not be altered before being sent to the API</li>
+    <% else %>
+    <li>Collect the timestamp immediately before the client makes the request to the API</li>
+    <% end %>
 
-* Submit a UTC timestamp in the format <code>yyyy-MM-ddThh:mm:ss.sssZ</code>. You must include seconds and milliseconds.
+    <li>Submit a UTC timestamp in the format <code>yyyy-MM-ddThh:mm:ss.sssZ</code>. You must include seconds and milliseconds.</li>
+  </ul>
 
-<strong>Example</strong>
+  <p><strong>Example</strong></p>
 
-<pre><code>Gov-Client-Local-IPs-Timestamp: 2020-09-21T10:30:05.123Z</code></pre>
+  <pre><code>Gov-Client-Local-IPs-Timestamp: 2020-09-21T10:30:05.123Z</code></pre>
+</li>
