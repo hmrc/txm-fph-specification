@@ -1,11 +1,15 @@
-### Gov-Vendor-Public-IP
+<li>
+  <h3 id="gov-vendor-public-ip">Gov-Vendor-Public-IP</h3>
 
-The public IP address of the servers the <a href="../#originating-device">originating device</a> sent their requests to.
+  <p>The public IP address of the servers the <a href="../#originating-device">originating device</a> sent their requests to.</p>
 
-* This could be an IP address of a Web Application Firewall (WAF), a DDoS Protection Service, or a load balancer that the vendor's DNS record resolves to
+  <ul class="govuk-list govuk-list--bullet">
+    <li>This could be an IP address of a Web Application Firewall (WAF), a DDoS Protection Service, or a load balancer that the vendor's DNS record resolves to</li>
 
-* If the connection between client and server is over a private network, you will not be able to collect a public IP address. You need to <a href="../../getting-it-right/#missing-header-data">check what to do about missing data</a>.
+    <li>If the connection between client and server is over a private network, you will not be able to collect a public IP address. You need to <a href="../../getting-it-right/#missing-header-data">check what to do about missing data</a>.</li>
+  </ul>
 
-<strong>Example</strong>
+  <p><strong>Example</strong></p>
 
-<pre><code>Gov-Vendor-Public-IP: 203.0.113.6</code></pre>
+  <pre><code>Gov-Vendor-Public-IP: 203.0.113.6</code></pre>
+</li>

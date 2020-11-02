@@ -1,0 +1,17 @@
+<li>
+  <h3 id="gov-client-public-port">Gov-Client-Public-Port</h3>
+
+  <p>The public TCP port used by the <a href="../#originating-device">originating device</a> when initiating the request.</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>This must not be a server port, for example 80 for http connections and 443 for https connections</li>
+
+    <li>The valid range is between 0 and 65535</li>
+
+    <li>If the connection between client and server is over a private network, you will not be able to collect a value. You need to <a href="../../getting-it-right/#missing-header-data">check what to do about missing data</a>.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Client-Public-Port: 12345</code></pre>
+</li>

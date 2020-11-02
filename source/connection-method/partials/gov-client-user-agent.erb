@@ -1,0 +1,27 @@
+<li>
+  <h3 id="gov-client-user-agent">Gov-Client-User-Agent</h3>
+
+  <p>Identifies the operating system and device.</p>
+
+  <p>These fields should be submitted as a list of key-value data structures:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li><code>os-family</code> is the operating system family, for example <code>Windows</code> or <code>MacOS</code></li>
+
+    <li><code>os-version</code> is the operating system version, for example <code>10</code> or <code>10.15.7</code></li>
+
+    <li><code>device-manufacturer</code> is the manufacturer of the device, for example <code>Dell</code> or <code>Apple</code></li>
+
+    <li><code>device-model</code> is the model of the device, for example <code>XPS13</code> or <code>MacBookPro15,2</code></li>
+  </ul>
+
+  <p>Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>.</p>
+
+  <p><strong>Examples</strong></p>
+
+  <% if locals.has_key?(:connection_method) && locals[:connection_method].start_with?('MOBILE_') %>
+  <pre><code>Gov-Client-User-Agent: os-family=iOS&os-version=13.3.1&device-manufacturer=Apple&device-model=iPhone12%2C3</code></pre>
+  <% else %>
+  <pre><code>Gov-Client-User-Agent: os-family=Windows&os-version=Server%202012&device-manufacturer=Dell%20Inc.&device-model=OptiPlex%20980</code></pre>
+  <% end %>
+</li>

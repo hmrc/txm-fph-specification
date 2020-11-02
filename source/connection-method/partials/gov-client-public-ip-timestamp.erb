@@ -1,0 +1,15 @@
+<li>
+  <h3 id="gov-client-public-ip-timestamp">Gov-Client-Public-IP-Timestamp</h3>
+
+  <p>A timestamp to show when Gov-Client-Public-IP is collected.</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Collect the timestamp at the same time your application collects the client's public IP address. This is usually when the backend server receives the request from the client. It could be at the Web Application Firewall (WAF), load balancer, reverse proxy or the server process itself.</li>
+
+    <li>Submit a UTC timestamp in the format <code>yyyy-MM-ddThh:mm:ss.sssZ</code>. You must include seconds and milliseconds.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Client-Public-IP-Timestamp: 2020-09-21T10:30:05.123Z</code></pre>
+</li>

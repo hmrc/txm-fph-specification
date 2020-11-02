@@ -1,0 +1,23 @@
+<li>
+  <h3 id="gov-client-screens">Gov-Client-Screens</h3>
+
+  <p>Information about the <a href="../#originating-device">originating device's</a> screens.</p>
+
+  <p>These fields should be submitted as a list of key-value data structures:</p>
+
+  <p><code>width</code> is the reported width of the screen in pixels</p>
+
+  <p><code>height</code> is the reported height of the screen in pixels</p>
+
+  <p><code>scaling-factor</code> is the reported scaling factor of the screen. For example, high-pixel density screens might have a scaling factor of 2, whereas standard definition screens might have a scaling factor of 1.</p>
+
+  <p><code>colour-depth</code> is the colour depth of the screen in bits</p>
+
+  <p><strong>Example</strong></p>
+
+  <% if locals.has_key?(:connection_method) && locals[:connection_method].start_with?('MOBILE_') %>
+  <pre><code>Gov-Client-Screens: width=375&height=812&scaling-factor=2&colour-depth=32</code></pre>
+  <% else %>
+  <pre><code>Gov-Client-Screens: width=1920&height=1080&scaling-factor=1&colour-depth=16,width=3000&height=2000&scaling-factor=1.25&colour-depth=16</code></pre>
+  <% end %>
+</li>
