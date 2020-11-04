@@ -42,11 +42,11 @@ Values must not be empty.
 
 ## How we check data
 
-We monitor API calls from all applications. If data submitted by your application has errors or warnings, we'll email a report with the details. We email reports once a month. 
+We monitor API calls from all applications. If data submitted by your application has errors or warnings, we'll email a report with the details. We email reports once a month.
 
 It is important that the right people in your organisation receive the reports. You'll need to check who that is and make sure they are registered on HMRC's Developer Hub.  
 
-To help avoid errors and warnings, <a href="../test-api/#use-the-test-api">use the Test API</a>. 
+To help avoid errors and warnings, <a href="../test-api/#use-the-test-api">use the Test API</a>.
 
 ## Missing header data
 
@@ -93,5 +93,11 @@ If you are explaining an exceptional case that means you cannot collect a value,
 What changed:
 
 * Gov-Vendor-Product-Name required for all connection methods
-* Gov-Vendor-Public-IP-Timestamp required with Gov-Vendor-Public-IP
+* Gov-Client-Public-IP-Timestamp required for all via server connection methods
 * Gov-Client-Local-IPs-Timestamp required with Gov-Client-Local-IPs
+* Gov-Client-Device-ID must be submitted as a universally unique identifier (UUID)
+* Gov-Client-User-Agent must be submitted as a key-value structure
+* Clarification that Gov-Client-Multi-Factor accepts seconds and milliseconds
+* Clarification on when to collect values for Gov-Client-Local-IPs
+
+To check what you need to send, <a href="../connection-method/" onclick="ga('send', 'event', 'On Page Navigation', 'Change Log', 'Select your connection method');">select your connection method</a>.
