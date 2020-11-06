@@ -92,9 +92,9 @@ If you are explaining an exceptional case that means you cannot collect a value,
 
 What changed:
 
-* Gov-Vendor-Product-Name required for all connection methods
-* Gov-Client-Public-IP-Timestamp required for all via server connection methods
-* Gov-Client-Local-IPs-Timestamp required with Gov-Client-Local-IPs
+* Gov-Client-Local-IPs-Timestamp is a new header for all connection methods
+* Gov-Client-Public-IP-Timestamp is a new header for via server connection methods
+* Gov-Vendor-Product-Name is a new header for all connection methods
 * Gov-Client-Device-ID must be submitted as a universally unique identifier (UUID)
 * Gov-Client-User-Agent must be submitted as a key-value structure
 * Clarification that Gov-Client-Multi-Factor accepts seconds and milliseconds
