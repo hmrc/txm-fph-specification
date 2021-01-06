@@ -43,3 +43,37 @@ pre > code {
   white-space: pre-wrap !important;
   word-break: break-all !important;
 }
+
+ol.cmq-header-list--numbered {
+  list-style: none;
+  counter-reset: cmq-headers;
+  padding-left: 0;
+}
+
+ol.cmq-header-list--numbered > li {
+  counter-increment: cmq-headers;
+}
+
+ol.cmq-header-list--numbered > li::before {
+  content: counter(cmq-headers) ". ";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+ol.cmq-header-list--numbered > li > h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+ol.cmq-header-list--numbered > li > h3 > a {
+  margin-top: -1.3rem;
+  margin-left: -1.3rem;
+}
+
+ol.cmq-header-list--numbered > li > p {
+  margin-block-start: 0;
+}
+
+ol.cmq-header-list--numbered > li li {
+  margin-bottom: 1rem;
+}

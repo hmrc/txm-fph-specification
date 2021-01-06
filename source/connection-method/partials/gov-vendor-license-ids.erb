@@ -1,0 +1,22 @@
+<li>
+  <h3 id="gov-vendor-license-ids">Gov-Vendor-License-IDs</h3>
+
+  <p>A key-value data structure of hashed license keys relating to the vendor software initiating the API request on the <a href="../#originating-device">originating device</a>.</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      Use this format:<br>
+      <code>&lt;software-name&gt;=&lt;hashed-license-value&gt;&&lt;software-name-2&gt;=&lt;hashed-license-value-2&gt;& …</code>
+    </li>
+
+    <li>To keep consistency in the values submitted, use the same hashing function</li>
+
+    <li>Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).</li>
+
+    <li>If there are no licenses on the <a href="../#originating-device">originating device</a>, you will not be able to collect a value. You need to <a href="../../getting-it-right/#missing-header-data">check what to do about missing data</a>.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <pre><code>Gov-Vendor-License-IDs: my%20licensed%20software=8D7963490527D33716835EE7C195516D5E562E03B224E9B359836466EE40CDE1</code></pre>
+</li>

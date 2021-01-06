@@ -1,0 +1,11 @@
+Changes to what you need to submit:
+
+* <a href="#gov-client-device-id">Gov-Client-Device-ID</a> must be a UUID
+* <a href="#gov-client-local-ips-timestamp">Gov-Client-Local-IPs-Timestamp</a> is a new header
+<% if locals.has_key?(:connection_method) && locals[:connection_method].end_with?('_VIA_SERVER') %>
+* <a href="#gov-client-public-ip-timestamp">Gov-Client-Public-IP-Timestamp</a> is a new header
+<% end %>
+<% if locals.has_key?(:connection_method) && locals[:connection_method] != 'WEB_APP_VIA_SERVER' %>
+* <a href="#gov-client-user-agent">Gov-Client-User-Agent</a> must be a key-value structure
+<% end %>
+* <a href="#gov-vendor-product-name">Gov-Vendor-Product-Name</a> is a new header

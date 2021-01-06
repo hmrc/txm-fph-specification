@@ -7,6 +7,8 @@ description: Page description for search engines
 
 # Batch process direct
 
+<%= partial 'connection-method/partials/change-summary',  :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
+
 Make sure you only select this connection method when your users do not initiate an action, for example an overnight batch process to get VAT obligations.
 
 <div class="govuk-warning-text">
@@ -17,30 +19,16 @@ Make sure you only select this connection method when your users do not initiate
   </strong>
 </div>
 
-
-<%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/device-id' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/user-ids', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/timezone' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/local-ips' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/mac-address' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/user-agent', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/vendor-version', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' }%>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/gov-vendor-license-id' %>
-<hr class="govuk-section-break govuk-section-break--visible">
+<ol class="govuk-list cmq-header-list--numbered">
+  <%= partial 'connection-method/partials/gov-client-connection-method', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
+  <%= partial 'connection-method/partials/gov-client-device-id' %>
+  <%= partial 'connection-method/partials/gov-client-local-ips', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
+  <%= partial 'connection-method/partials/gov-client-local-ips-timestamp', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
+  <%= partial 'connection-method/partials/gov-client-mac-addresses' %>
+  <%= partial 'connection-method/partials/gov-client-timezone' %>
+  <%= partial 'connection-method/partials/gov-client-user-agent', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
+  <%= partial 'connection-method/partials/gov-client-user-ids', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' } %>
+  <%= partial 'connection-method/partials/gov-vendor-license-ids' %>
+  <%= partial 'connection-method/partials/gov-vendor-product-name' %>
+  <%= partial 'connection-method/partials/gov-vendor-version', :locals => { :connection_method => 'BATCH_PROCESS_DIRECT' }%>
+</ol>

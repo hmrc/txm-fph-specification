@@ -6,7 +6,8 @@ description: You need to send header data to HMRC when you use our APIs. Check t
 
 # Getting it right
 
-Version 2.9 issued 14 July 2020
+Version 3.0 issued 16 November 2020 <br/>
+<a href="#change-log" onclick="ga('send', 'event', 'On Page Navigation', 'Getting it right', 'Check what has changed');">Check what has changed</a>
 
 ## Send data in the correct format
 
@@ -38,6 +39,14 @@ Values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target=
 
 Values must not be empty.
 
+
+## How we check data
+
+We monitor API calls from all applications. If data submitted by your application has errors or warnings, we'll email a report with the details. We email reports once a month.
+
+It is important that the right people in your organisation receive the reports. You'll need to check who that is and make sure they are registered on HMRC's Developer Hub.  
+
+To help avoid errors and warnings, <a href="../test-api/#use-the-test-api">use the Test API</a>.
 
 ## Missing header data
 
@@ -74,3 +83,21 @@ If you use or plan to use third-party software and libraries, make sure you can 
 You can send an email to <a href="mailto:SDSTeam@hmrc.gov.uk" onclick="ga('send', 'event', 'On Page Navigation', 'Contact us', 'SDST');">SDSTeam@hmrc.gov.uk</a>.
 
 If you are explaining an exceptional case that means you cannot collect a value, include as many details as you can.
+
+## Change log
+
+### Version 3.0
+
+16 November 2020
+
+What changed:
+
+* Gov-Client-Local-IPs-Timestamp is a new header for all connection methods
+* Gov-Client-Public-IP-Timestamp is a new header for via server connection methods
+* Gov-Vendor-Product-Name is a new header for all connection methods
+* Gov-Client-Device-ID must be submitted as a universally unique identifier (UUID)
+* Gov-Client-User-Agent must be submitted as a key-value structure
+* Clarification that Gov-Client-Multi-Factor accepts seconds and milliseconds
+* Clarification on when to collect values for Gov-Client-Local-IPs
+
+To check what you need to send, <a href="../connection-method/" onclick="ga('send', 'event', 'On Page Navigation', 'Change Log', 'Select your connection method');">select your connection method</a>.

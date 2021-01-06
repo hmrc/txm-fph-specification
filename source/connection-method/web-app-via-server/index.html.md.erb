@@ -7,6 +7,8 @@ description: Page description for search engines
 
 # Web application via server
 
+<%= partial 'connection-method/partials/change-summary',  :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
@@ -17,53 +19,25 @@ description: Page description for search engines
 
 Where multiple services manage your intermediary servers, headers must contain data from all services.
 
-<%= partial 'connection-method/partials/connection-method', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/public-ips' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/public-port' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/device-id' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/user-ids', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/timezone' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/local-ips', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/screens', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/window-size', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/browser-plugins' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/browser-js-user-agent', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/browser-do-not-track' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/multi-factor' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/vendor-version', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/gov-vendor-license-id' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/gov-vendor-public-ip' %>
-<hr class="govuk-section-break govuk-section-break--visible">
-
-<%= partial 'connection-method/partials/gov-vendor-forwarded' %>
-<hr class="govuk-section-break govuk-section-break--visible">
+<ol class="govuk-list cmq-header-list--numbered">
+  <%= partial 'connection-method/partials/gov-client-connection-method', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+  <%= partial 'connection-method/partials/gov-client-browser-do-not-track' %>
+  <%= partial 'connection-method/partials/gov-client-browser-js-user-agent', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+  <%= partial 'connection-method/partials/gov-client-browser-plugins' %>
+  <%= partial 'connection-method/partials/gov-client-device-id' %>
+  <%= partial 'connection-method/partials/gov-client-local-ips', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+  <%= partial 'connection-method/partials/gov-client-local-ips-timestamp', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+  <%= partial 'connection-method/partials/gov-client-multi-factor' %>
+  <%= partial 'connection-method/partials/gov-client-public-ip' %>
+  <%= partial 'connection-method/partials/gov-client-public-ip-timestamp' %>
+  <%= partial 'connection-method/partials/gov-client-public-port' %>
+  <%= partial 'connection-method/partials/gov-client-screens', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+  <%= partial 'connection-method/partials/gov-client-timezone' %>
+  <%= partial 'connection-method/partials/gov-client-user-ids', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+  <%= partial 'connection-method/partials/gov-client-window-size', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+  <%= partial 'connection-method/partials/gov-vendor-forwarded' %>
+  <%= partial 'connection-method/partials/gov-vendor-license-ids' %>
+  <%= partial 'connection-method/partials/gov-vendor-product-name' %>
+  <%= partial 'connection-method/partials/gov-vendor-public-ip' %>
+  <%= partial 'connection-method/partials/gov-vendor-version', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
+</ol>
