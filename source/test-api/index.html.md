@@ -3,6 +3,7 @@ title: Use the Test API - Fraud prevention
 weight: 40
 description: You need to send header data to HMRC when you use our APIs. Use the Fraud Prevention Test API to check data before you submit it.
 ---
+<%= partial 'tracking-consent/partials/_google_tag_manager_js' %>
 
 # Use the Test API
 

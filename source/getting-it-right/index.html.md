@@ -3,6 +3,7 @@ title: Getting it right - Fraud prevention
 weight: 50
 description: You need to send header data to HMRC when you use our APIs. Check the fraud prevention specification. Check the formatting requirements and how to contact us about missing data.
 ---
+<%= partial 'tracking-consent/partials/_google_tag_manager_js' %>
 
 # Getting it right
 
