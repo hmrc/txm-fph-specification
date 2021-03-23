@@ -29,5 +29,7 @@
 
   <pre><code>Gov-Client-Local-IPs: 10.1.2.3,10.3.4.2</code></pre>
 
+  <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
   <pre><code>Gov-Client-Local-IPs: 65f46603-1f39-4ca5-957f-65e231804f91.local</code></pre>
-</li>
+  <% end %>
+  </li>
