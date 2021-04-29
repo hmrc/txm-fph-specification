@@ -10,11 +10,13 @@
     <% else %>
     <li>Collect the timestamp immediately before the client makes the request to the API</li>
     <% end %>
-
-    <li>Submit a UTC timestamp in the format <code>yyyy-MM-ddThh:mm:ss.sssZ</code>. You must include seconds and milliseconds.</li>
+    <li>If the timestamp is not in UTC zero time offset, you'll need to convert it</li>
+    <li>Submit a UTC timestamp in the format <code>yyyy-MM-ddThh:mm:ss.sssZ</code> where <code>Z</code> designates zero time offset</li>
+    <li>You must include <code>T</code> and use the 24 hour format</li>
+    <li>You must include seconds and milliseconds, including trailing zeros</li>
   </ul>
 
   <p><strong>Example</strong></p>
 
-  <pre><code>Gov-Client-Local-IPs-Timestamp: 2020-09-21T10:30:05.123Z</code></pre>
+  <pre><code>Gov-Client-Local-IPs-Timestamp: 2020-09-21T14:30:05.123Z</code></pre>
 </li>
