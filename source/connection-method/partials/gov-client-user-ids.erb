@@ -6,11 +6,11 @@
   <ul class="govuk-list govuk-list--bullet">
     <li>The keys should indicate accounts the user holds</li>
 
-    <li>Additional fields should contain the user’s identifiers with the vendor services involved in the request</li>
-
     <% if locals[:connection_method] != 'WEB_APP_VIA_SERVER' %>
     <li>The <code>os</code> field should contain the identifier of the user signed in on the <a href="../#originating-device">originating device</a></li>
     <% end %>
+
+    <li>Additional fields need to contain the user’s identifiers. This includes the identifier that the user signs into the application with, for example username, email or phone number. If there is an internal identifier, you should include it too.</li>
 
     <li>Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).</li>
   </ul>
@@ -20,11 +20,11 @@
 
   <p>If there is 1 vendor application involved in handling the request:</p>
 
-  <pre><code>Gov-Client-User-IDs: os=domain%5Calice&my-application-account=alice_account_id</code></pre>
+  <pre><code>Gov-Client-User-IDs: os=domain%5Calice&my-application-account=alice</code></pre>
 
   <p>If the request passes through 2 vendor applications:</p>
 
-  <pre><code>Gov-Client-User-IDs: os=domain%5Calice&my-application=alice_account_id&my-secondary-application=alice_secondary_account_id</code></pre>
+  <pre><code>Gov-Client-User-IDs: os=domain%5Calice&my-application=alice&my-secondary-application=alice_secondary</code></pre>
   <% end %>
 
 
