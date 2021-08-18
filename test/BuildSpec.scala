@@ -16,14 +16,14 @@
 
 package test
 
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
+
 import java.io.{File, PrintWriter}
-
-import org.scalatest.{Matchers, WordSpec}
-
 import scala.io.Source
 import sys.process._
 
-class BuildSpec extends WordSpec with Matchers {
+class BuildSpec extends AnyWordSpec with Matchers {
   "Building the content" should {
     "produce static files" in {
       val result = "bundle install" #&& Process(
