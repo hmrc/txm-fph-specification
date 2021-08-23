@@ -27,7 +27,7 @@ class BuildSpec extends AnyWordSpec with Matchers {
   "Building the content" should {
     "produce static files" in {
       val result = "bundle install" #&& Process(
-        "bundle exec middleman build --build-dir=public/ --clean",
+        "bundle exec middleman build --build-dir=public/ --clean --verbose",
         None,
         "BASE_PATH" -> "/guides/fraud-prevention/"
       ) !
