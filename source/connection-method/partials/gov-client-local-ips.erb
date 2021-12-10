@@ -10,17 +10,7 @@
     <li>Values must be collected immediately before each request is sent to the API</li>
     <% end %>
 
-    <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
-    <li>In some cases, it will be difficult to get these values but your application must try to obtain them</li>
-
-    <li>If you obtain a multicast DNS name instead of an IP address, you must still submit it</li>
-    <% end %>
-
     <li>Every IPv6 value in the list must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode separators (commas).</li>
-
-    <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
-    <li>You may be able to use WebRTC to discover local device IPs</li>
-    <% end %>
   </ul>
 
   <p><strong>Examples</strong></p>
@@ -28,8 +18,4 @@
   <pre><code>Gov-Client-Local-IPs: fc00%3A%3A,10.1.2.3</code></pre>
 
   <pre><code>Gov-Client-Local-IPs: 10.1.2.3,10.3.4.2</code></pre>
-
-  <% if locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
-  <pre><code>Gov-Client-Local-IPs: 65f46603-1f39-4ca5-957f-65e231804f91.local</code></pre>
-  <% end %>
   </li>
