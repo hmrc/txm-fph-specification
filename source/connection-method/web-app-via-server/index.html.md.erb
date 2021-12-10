@@ -8,8 +8,6 @@ description: Page description for search engines
 
 # Web application via server
 
-<%= partial 'connection-method/partials/change-summary',  :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
@@ -24,10 +22,7 @@ Where multiple services manage your intermediary servers, headers must contain d
   <%= partial 'connection-method/partials/gov-client-connection-method', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
   <%= partial 'connection-method/partials/gov-client-browser-do-not-track' %>
   <%= partial 'connection-method/partials/gov-client-browser-js-user-agent', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-  <%= partial 'connection-method/partials/gov-client-browser-plugins' %>
   <%= partial 'connection-method/partials/gov-client-device-id' %>
-  <%= partial 'connection-method/partials/gov-client-local-ips', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
-  <%= partial 'connection-method/partials/gov-client-local-ips-timestamp', :locals => { :connection_method => 'WEB_APP_VIA_SERVER' } %>
   <%= partial 'connection-method/partials/gov-client-multi-factor' %>
   <%= partial 'connection-method/partials/gov-client-public-ip' %>
   <%= partial 'connection-method/partials/gov-client-public-ip-timestamp' %>
