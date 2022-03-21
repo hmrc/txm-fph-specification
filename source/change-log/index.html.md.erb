@@ -1,0 +1,47 @@
+---
+title: Change log
+weight: 50
+description: You need to send header data to HMRC when you use our APIs. Check the fraud prevention specification. Check the formatting requirements and how to contact us about missing data.
+---
+<%= partial 'tracking-consent/partials/google_tag_manager_js' %>
+
+# Change log
+
+### Version 3.1
+
+#### 31 January 2022
+
+ * For the web application via server connection method, you do not need to submit values for Gov-Client-Browser-Plugins, Gov-Client-Local-IPs or Gov-Client-Local-IPs-Timestamp. If your application submits values for these headers it is not an issue.
+ * For all connection methods other than web application via server, you still need to submit values for Gov-Client-Local-IPs and Gov-Client-Local-IPs-Timestamp
+
+This will be updated in the <a href="https://www.gov.uk/government/publications/direction-under-regulation-22-of-the-delivery-of-tax-information-through-software-ancillary-metadata-regulations-2019-si-2019360">Directions</a>.
+
+### Version 3.0
+
+#### 12 July 2021
+
+* Clarification on fields for Gov-Client-User IDs
+
+This will be updated in the <a href="https://www.gov.uk/government/publications/direction-under-regulation-22-of-the-delivery-of-tax-information-through-software-ancillary-metadata-regulations-2019-si-2019360">Directions</a>.
+
+#### 3 June 2021
+
+* Added a link to the Compliance and Sanctions Guidelines
+
+#### 30 April 2021
+
+* Clarification on the format for Gov-Client-Public-IP-Timestamp and Gov-Client-Local-IPs-Timestamp
+
+This will be updated in the <a href="https://www.gov.uk/government/publications/direction-under-regulation-22-of-the-delivery-of-tax-information-through-software-ancillary-metadata-regulations-2019-si-2019360">Directions</a>.
+
+#### 6 January 2021
+
+* Gov-Client-Local-IPs-Timestamp is a new header for all connection methods
+* Gov-Client-Public-IP-Timestamp is a new header for via server connection methods
+* Gov-Vendor-Product-Name is a new header for all connection methods
+* Gov-Client-Device-ID must be submitted as a universally unique identifier (UUID)
+* Gov-Client-User-Agent must be submitted as a key-value structure
+* Clarification that Gov-Client-Multi-Factor accepts seconds and milliseconds
+* Clarification on when to collect values for Gov-Client-Local-IPs
+
+To check what you need to send, <a href="../connection-method/" onclick="ga('send', 'event', 'On Page Navigation', 'Change Log', 'Select your connection method');">select your connection method</a>.
