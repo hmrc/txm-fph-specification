@@ -18,15 +18,12 @@ package controllers
 
 import javax.inject.Inject
 import play.api.mvc.MessagesControllerComponents
-import uk.gov.hmrc.play.bootstrap.controller.FrontendController
-
-import scala.concurrent.ExecutionContext
+import uk.gov.hmrc.play.bootstrap.frontend.controller.FrontendController
 
 class DocumentationController @Inject()(
   mcc: MessagesControllerComponents,
   assets: Assets
-)(implicit ec: ExecutionContext)
-    extends FrontendController(mcc) {
+) extends FrontendController(mcc) {
 
   def topLevelPage(path: String) =
     assets.at(path = s"/public/$path", file = "index.html")
