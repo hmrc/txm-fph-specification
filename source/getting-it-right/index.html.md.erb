@@ -10,6 +10,42 @@ description: Check your application is sending data in the right format. Underst
 Version 3.1 issued 31 January 2022 <br/>
 <a href="../change-log/" onclick="ga('send', 'event', 'On Page Navigation', 'Getting it right', 'Check what has changed');">Check what has changed</a>
 
+## How we check data
+
+We monitor API calls from all applications. We run automated tests to check data meets the requirements and is formatted correctly. In addition, we manually test data to make sure values are realistic and what we expect.
+
+<div class="govuk-inset-text">
+If your application passes our automated checks, you still need to fix any issues we find when we test it manually.
+</div>
+
+### What statuses mean
+
+Missing, Invalid, Errors or Advisories header statuses mean you have issues to fix or review.
+
+Correct header status means we have not found any issues this month, and your application currently meets the fraud prevention specification - not that your application is ‘compliant’.
+
+<div class="govuk-inset-text">
+Your header status is not to be shared outside your organisation.
+</div>
+
+
+## Check your application
+
+You can now check your application’s fraud prevention headers on Developer Hub at any time.
+
+To check your fraud prevention headers
+
+1. Log in to Developer Hub
+2. Go to View all applications
+3. Select your Production application
+4. On the left, select ‘Fraud prevention’
+
+We no longer send detailed reports to you every month.
+
+Now we send a monthly email telling you the status of your application, and what you need to do. The right people in your organisation need to receive the email - make sure they are all registered on HMRC’s Developer Hub.
+
+Before you submit any header data, <a href="../test-api/#use-the-test-api">use the Test API</a>.
+
 ## Send data in the correct format
 
 Header data contents must be submitted using the US-ASCII character set, with other characters <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer" onclick="ga('send', 'event', 'On Page Navigation', 'Send data in the correct format', 'Percent encoded 1');"> percent encoded (opens in a new tab)</a>.
@@ -40,14 +76,6 @@ Values must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target=
 
 Values must not be empty.
 
-
-## How we check data
-
-We monitor API calls from all applications to check data meets the requirements and is formatted correctly.
-
-If you need to fix or check data submitted by your application, we email a monthly report with the details. The right people in your organisation need to receive the report - make sure they are all registered on HMRC's Developer Hub.
-
-Before you submit any header data, <a href="../test-api/#use-the-test-api">use the Test API</a>.
 
 ## Missing header data
 
