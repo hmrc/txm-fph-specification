@@ -9,6 +9,9 @@ description: The data you need to send depends on your software architecture. Se
 
 The header data you need to send depends on your software architecture. We refer to your architecture as a connection method.
 
+It is your responsibility to [choose the right technology stack](#choose-the-right-technology-stack) to support the collection of all header data required for your connection method.
+Some popular choices do not.
+
 Your connection method depends on <a href="#connecting-to-hmrc">how your application connects</a> to HMRC and your <a href="#originating-device">originating device</a>. You might have more than 1 connection method.
 
 To find out what data you need to send, select the connection methods used by your application.
@@ -52,6 +55,17 @@ Only select this for requests when your users do not initiate an action and your
   </div>
 </details>
 
+### Choose the right technology stack
+
+Before building your application, make sure you select technologies that will allow
+you to send all header data required for your connection method. For example, some popular load balancer
+products do not pass on users’ public IPs or ports.
+
+If you find out later that your chosen technology stack does not support sending all required values, it may
+involve effort to change.
+
+We are not able to provide advice on specific technologies.
+
 
 ### Connecting to HMRC
 
@@ -68,3 +82,4 @@ Originating device means the device that initiates an action, for example a VAT 
 In desktop application direct, or desktop application via server, the originating device might be a hosted desktop environment accessed remotely by the user.
 
 If actions initiated by users are stored on a server and sent in batches, the originating device is the user's device and not the server. You must only select batch process direct as a connection method when your users do not initiate an action.
+
