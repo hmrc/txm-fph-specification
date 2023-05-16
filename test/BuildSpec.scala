@@ -21,7 +21,8 @@ import org.scalatest.wordspec.AnyWordSpec
 
 import java.io.{File, PrintWriter}
 import scala.io.Source
-import sys.process._
+import scala.language.postfixOps
+import scala.sys.process._
 
 class BuildSpec extends AnyWordSpec with Matchers {
   "Building the content" should {
@@ -36,7 +37,7 @@ class BuildSpec extends AnyWordSpec with Matchers {
 
       val fileHandle = new File("public/stylesheets/manifest.css")
       val source = Source.fromFile(fileHandle, "UTF-8")
-      val content = source.getLines
+      val content = source.getLines()
         .mkString("\n")
         .replace("url(\"", "url(\"/guides/fraud-prevention")
       source.close()
