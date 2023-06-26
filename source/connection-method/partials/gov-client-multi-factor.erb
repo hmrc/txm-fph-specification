@@ -21,11 +21,11 @@
     <li><code>AUTH_CODE</code> the MFA was performed by sending an authorisation code to the user in some out-of-band channel, for example, by email or by SMS</li>
 
     <li><code>OTHER</code> a different MFA method was used than the available values</li>
-
-    <li><code>timestamp</code> is a UTC timestamp recording the time of the last successful prompt for this factor. As a minimum, use this format <code>yyyy-MM-ddThh:mmZ</code>. You can include seconds and milliseconds.</li>
-
-    <li><code>unique-reference</code> identifies a single factor. For example, a salted-and-hashed phone number used for SMS, or an identifier linked to a TOTP secret, but not the secret itself. Use the same hashing function consistently so that this can be recognised across API calls.</li>
   </ul>
+
+  <p><code>timestamp</code> is a UTC timestamp recording the time of the last successful prompt for this factor. As a minimum, use this format <code>yyyy-MM-ddThh:mmZ</code>. You can include seconds and milliseconds.</p>
+
+  <p><code>unique-reference</code> identifies a single factor. For example, a salted-and-hashed phone number used for SMS, or an identifier linked to a TOTP secret, but not the secret itself. Use the same hashing function consistently so that this can be recognised across API calls.</p>
 
   <p><strong>Example</strong></p>
 
