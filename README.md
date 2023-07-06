@@ -1,19 +1,16 @@
 # Technical Documentation - Fraud Prevention Guide
 
-## Getting started
+## Overview
 
-To preview or build the website, we need to use the terminal.
+Service Guides are created using GDS [Tech Docs Templates](https://github.com/alphagov/tech-docs-template).
+The generated HTML files are then served by a simple Scala Play application so that they can be deployed
+as an MDTP microservice.
 
-Install Ruby with Rubygems, perferably with a [Ruby version manager][rvm],
-and the [Bundler gem][bundler].
+Examples of Service Guides can be seen in [API Documentation in Developer Hub](https://developer.service.hmrc.gov.uk/api-documentation/docs/api).
 
-In the application folder type the following to install the required gems:
+The `batect` and `Docker` setup instructions below have been taken from [Import Control POG Service Guide](https://github.com/hmrc/import-control-pog-service-guide).
 
-```
-bundle install
-```
-
-## Making changes
+## Editing content
 
 To make changes edit the source files in the `source` folder.
 
@@ -41,14 +38,38 @@ To add a completely new page, create a file with a `.html.md` extension in the `
 
 For example, `source/about.html.md` will be accessible on <http://localhost:4567/about.html>.
 
-## Preview
+## Previewing
 
 Whilst writing documentation we can run a middleman server to preview how the
 published version will look in the browser. After saving a change the preview in
 the browser will automatically refresh.
 
-The preview is only available on our own computer. Others won't be able to
-access it if they are given the link.
+There are two options for running the middleman server, using Docker or locally.
+
+### Option 1 - Using Docker (recommended)
+
+Requirements:
+* [Docker](https://www.docker.com/)
+
+To live preview:
+```
+./batect preview
+```
+The local URL and port where the files can be previewed will be output, this is normally http://localhost:4567.
+
+NB The first time this is run it builds the Docker image and installs dependencies so may take 5 mins.
+Subsequent runs will be much quicker.
+
+### Option 2 - Local install (Not recommended)
+
+Install Ruby with Rubygems, perferably with a [Ruby version manager][rvm],
+and the [Bundler gem][bundler].
+
+In the application folder type the following to install the required gems:
+
+```
+bundle install
+```
 
 Type the following to start the server:
 
@@ -67,23 +88,36 @@ If all goes well something like the following output will be displayed:
 
 You should now be able to view a live preview at http://localhost:4567.
 
-## Build
+## Building
 
 If you want to publish the website without using a build script you may need to
 build the static HTML files.
 
-Type the following to build the HTML:
+If you are using docker:
+
+```
+./batect build
+```
+
+Otherwise, type the following to build the HTML:
 
 ```
 bundle exec middleman build
 ```
 
-This will create a `build` subfolder in the application folder which contains
+The above actions will create a `build` subfolder in the application folder which contains
 the HTML and asset files ready to be published.
 
 [rvm]: https://www.ruby-lang.org/en/documentation/installation/#managers
 [bundler]: http://bundler.io/
 
-### License
+## Running the Scala Application
+```
+sbt run
+```
+
+The local URL and port where the files can be previewed will be output, this is normally http://localhost:9000.
+
+## License
 
 This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html").
