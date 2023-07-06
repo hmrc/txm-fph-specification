@@ -9,22 +9,15 @@ description: Find out what has changed in the specification and make sure your a
 
 ### Version 3.2
 
-#### **&lt;Release date TBC&gt;**
+#### 28 July 2023
 
- * For the mobile application via server and mobile application direct connection methods, you do not need to provide a
-   value for `os` in Gov-Client-User-IDs. If your application submits values for `os` it is not an issue.
- * For all connection methods other than web application via server, mobile application via server and mobile
-   application direct, you still need to submit a value for `os` in Gov-Client-User-IDs.
- * For the mobile application via server and mobile application direct connection methods, you do not need to submit
-   values for Gov-Client-MAC-Addresses. If your application submits values for this header it is not an issue.
- * For all connection methods other than web application via server, mobile application via server and mobile
-   application direct, you still need to submit values for Gov-Client-MAC-Addresses.
- * Clarification that Gov-Vendor-Forwarded must contain at least 1 pair of IPs with Gov-Client-Public-IP in the ‘for’ field and
-   Gov-Vendor-Public-IP in the ‘by’ field.
- * Clarification that for the desktop application via server, mobile application via server and other via server connection methods,
-   the value submitted for Gov-Vendor-Version must contain at least two key value pairs.
- * Clarification that for the web application via server connection method, you must submit the value `false` if the user’s browser does
-   not support Do Not Track.
+ * The value for the `os` field in Gov-Client-User-IDs is no longer required for the mobile application
+   via server and mobile application direct connection methods
+ * Gov-Client-MAC-Addresses is no longer required for the mobile application via server and mobile application
+   direct connection methods
+ * Clarification that Gov-Vendor-Forwarded must contain values from Gov-Vendor-Public-IP and Gov-Client-Public-IP
+ * Clarification on how many key value pairs to include in Gov-Vendor-Version
+ * Clarification on Gov-Client-Browser-Do-Not-Track
 
 This will be updated in the Directions. To check what you need to send, <a href="../connection-method/">select your connection method</a>.
 
