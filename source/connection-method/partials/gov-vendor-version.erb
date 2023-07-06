@@ -1,3 +1,5 @@
+<% requires_multiple_versions = ['DESKTOP_APP_VIA_SERVER', 'MOBILE_APP_VIA_SERVER', 'OTHER_VIA_SERVER'].include?(locals[:connection_method]) %>
+
 <li>
   <h3 id="gov-vendor-version">Gov-Vendor-Version</h3>
 
@@ -10,12 +12,19 @@
     </li>
 
     <li>Every key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">percent encoded (opens in a new tab)</a>. Do not percent encode separators (equal signs and ampersands).</li>
+
+    <% if requires_multiple_versions %>
+      <li>A minimum of two key value pairs must be provided, one for the server and another for the client application.</li>
+    <% end %>
+
   </ul>
 
   <p><strong>Example</strong></p>
 
   <% if locals.has_key?(:connection_method) && locals[:connection_method].end_with?('_DIRECT') %>
   <pre><code>Gov-Vendor-Version: my-application=1.6.0</code></pre>
+  <% elsif locals[:connection_method] == 'WEB_APP_VIA_SERVER' %>
+  <pre><code>Gov-Vendor-Version: my-web-app=2.2.2</code></pre>
   <% elsif locals[:connection_method] == 'MOBILE_APP_VIA_SERVER' %>
   <pre><code>Gov-Vendor-Version: my-mobile-app=2.2.2&my-serverside-code=v3.8</code></pre>
   <% elsif locals[:connection_method] == 'DESKTOP_APP_VIA_SERVER' %>

@@ -6,9 +6,9 @@
   <ul class="govuk-list govuk-list--bullet">
     <li>For each hop over the internet, a key-value data structure with a <code>by</code> and <code>for</code> field must be appended to the list</li>
 
-    <li>The <code>by</code> field must be the public IP address that the server received the request on</li>
+    <li>The <code>by</code> field must be the public IP address that the server received the request on. For the last hop, this is the public IP address of the server and value of Gov-Vendor-Public-IP.</li>
 
-    <li>The <code>for</code> field must be the public IP address of the request sender. For the first hop, this is the public IP address of the client. For subsequent hops, it is the public IP address of the intermediate server.</li>
+    <li>The <code>for</code> field must be the public IP address of the request sender. For the first hop, this is the public IP address of the client and value of Gov-Client-Public-IP. For subsequent hops, it is the public IP address of the intermediate server.</li>
 
     <li>
       Each key and value must be <a href="https://tools.ietf.org/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">
