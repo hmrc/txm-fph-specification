@@ -1,3 +1,4 @@
+<% connection_method_supports_os = !['WEB_APP_VIA_SERVER', 'MOBILE_APP_DIRECT', 'MOBILE_APP_VIA_SERVER'].include?(locals[:connection_method]) %>
 <li>
   <h3 id="gov-client-user-ids">Gov-Client-User-IDs</h3>
 
@@ -6,7 +7,7 @@
   <ul class="govuk-list govuk-list--bullet">
     <li>The keys should indicate accounts the user holds</li>
 
-    <% if locals[:connection_method] != 'WEB_APP_VIA_SERVER' %>
+    <% if connection_method_supports_os %>
     <li>The <code>os</code> field should contain the identifier of the user signed in on the <a href="../#originating-device">originating device</a></li>
     <% end %>
 
@@ -56,13 +57,13 @@
   <% if locals[:connection_method] == 'MOBILE_APP_DIRECT' %>
   <p><strong>Example</strong></p>
 
-  <pre><code>Gov-Client-User-IDs: os=alice&my-application=alice123</code></pre>
+  <pre><code>Gov-Client-User-IDs: my-application=alice123</code></pre>
   <% end %>
 
   <% if locals[:connection_method] == 'MOBILE_APP_VIA_SERVER' %>
   <p><strong>Example</strong></p>
 
-  <pre><code>Gov-Client-User-IDs: os=alice&my-application=alice123</code></pre>
+  <pre><code>Gov-Client-User-IDs: my-application=alice123</code></pre>
   <% end %>
 
   <% if locals[:connection_method] == 'OTHER_DIRECT' %>

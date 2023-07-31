@@ -7,6 +7,21 @@ description: Find out what has changed in the specification and make sure your a
 
 # Change log
 
+### Version 3.2
+
+#### 1 August 2023
+
+ * For the mobile application via server and mobile application direct connection methods, you do not need to provide a
+   value for `os` in Gov-Client-User-IDs. If your application submits values for `os` it is not an issue.
+ * For the mobile application via server and mobile application direct connection methods, you do not need to submit
+   values for Gov-Client-MAC-Addresses. If your application submits values for this header it is not an issue.
+ * For the web application via server connection method, you do not need to submit a value for
+   Gov-Client-Browser-Do-Not-Track. If your application submits values for this header it is not an issue.
+ * Clarification that Gov-Vendor-Forwarded must contain values from Gov-Vendor-Public-IP and Gov-Client-Public-IP
+ * Clarification on how many key-value pairs to include in Gov-Vendor-Version
+
+This will be updated in the Directions. To check what you need to send, <a href="../connection-method/">select your connection method</a>.
+
 ### Version 3.1
 
 #### 4 April 2022
