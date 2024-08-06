@@ -3,7 +3,7 @@ val appName = "txm-fph-specification"
 lazy val microservice = Project(appName, file("."))
   .enablePlugins(play.sbt.PlayScala, SbtDistributablesPlugin)
   .settings(
-    scalaVersion := "2.13.12",
+    scalaVersion := "3.3.3",
     libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
     Global / lintUnusedKeysOnLoad := false,
     update / evictionWarningOptions := EvictionWarningOptions.default.withWarnScalaVersionEviction(false),
