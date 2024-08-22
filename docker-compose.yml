@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: .
+    command: bundle exec middleman server --verbose
+    volumes:
+      - './:/app'
+    working_dir: /app
+    ports:
+      - "4567:4567"
