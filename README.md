@@ -4,7 +4,7 @@
 
 To preview or build the website, we need to use the terminal.
 
-Install Ruby with Rubygems, perferably with a [Ruby version manager][rvm],
+Install Ruby with Rubygems, preferably with a [Ruby version manager][rvm],
 and the [Bundler gem][bundler].
 
 In the application folder type the following to install the required gems:
@@ -83,6 +83,45 @@ the HTML and asset files ready to be published.
 
 [rvm]: https://www.ruby-lang.org/en/documentation/installation/#managers
 [bundler]: http://bundler.io/
+
+## Testing
+
+To run some basic asset generation tests, run the following command:
+```
+sbt 'testOnly *BuildSpec*'
+```
+
+## Running with Docker
+
+Running `bundle install` may cause issues on some machines. Fortunately, there is an alternative by running via a Docker container.
+
+To run the specification via Docker (with live reload), use the following command from the repository root directory (i.e., the same directory as the docker-compose.yml file):
+```
+docker-compose up
+```
+
+or
+
+```
+docker compose up
+```
+
+Alternatively, to build the static HTML files, run:
+
+```
+docker-compose -f docker-compose-build.yml up
+```
+
+or 
+
+```
+docker compose -f docker-compose-build.yml up
+```
+
+It is possible to run tests via the Docker containers via:
+```
+sbt 'testOnly *BuildWithDockerSpec*'
+```
 
 ### License
 

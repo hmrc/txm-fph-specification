@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2024 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,25 +14,18 @@
  * limitations under the License.
  */
 
-package test
-
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
 import java.io.{File, PrintWriter}
 import scala.io.Source
 import scala.language.postfixOps
-import scala.sys.process._
+import scala.sys.process.*
 
-
-class BuildSpec extends AnyWordSpec with Matchers {
+class BuildWithDockerSpec extends AnyWordSpec with Matchers {
   "Building the content" should {
     "produce static files" in {
-      val result = "bundle install" #&& Process(
-        "bundle exec middleman build --build-dir=public/ --clean --verbose",
-        None,
-        "BASE_PATH" -> "/guides/fraud-prevention/"
-      ) !
+      val result = "docker-compose -f docker-compose-build.yml up" !
 
       result shouldBe 0
 
