@@ -3,7 +3,7 @@
 ## Getting started
 
 To preview or build the website, we need to use the terminal.
-
+ 
 Install Ruby with Rubygems, preferably with a [Ruby version manager][rvm],
 and the [Bundler gem][bundler].
 
