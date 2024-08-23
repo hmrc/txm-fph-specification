@@ -8,7 +8,7 @@ lazy val microservice = Project(appName, file("."))
     Global / lintUnusedKeysOnLoad := false,
     update / evictionWarningOptions := EvictionWarningOptions.default.withWarnScalaVersionEviction(false),
     majorVersion := 0,
-    scalacOptions += "-Wconf:src=routes/.*:s",
+    scalacOptions += "-Wconf:src=routes/.*:s"
   )
   .settings(
     resolvers += Resolver.jcenterRepo
