@@ -28,39 +28,37 @@ object GenerateStaticHtmlFilesRunner extends AutoPlugin {
   override def trigger: PluginTrigger = AllRequirements
 
   private val generateFiles: TaskKey[Unit] = TaskKey[Unit]("generateFiles", "Generates static files for Ruby application")
+  private val generateSite: TaskKey[Unit]  = TaskKey[Unit]("generateSite", "Runs bundle exec middleman to generate the static site")
+  private val rewriteAssetPaths: TaskKey[Unit] =
+    TaskKey[Unit]("rewriteAssetPaths", "Rewrites asset paths required for deployment in an environment")
 
   override def projectSettings: Seq[Setting[?]] =
     Seq(
-      generateFiles := {
-        generateSite()
+      generateSite := {
+        streams.value.log.info("Generating static site...")
 
-        rewriteAssetPaths()
+        val result = ("bundle install" #&& Process(
+          "bundle exec middleman build --build-dir=public/ --clean --verbose",
+          None,
+          "BASE_PATH" -> "/guides/fraud-prevention/"
+        )).!
+        if (result != 0) sys.error("There was an error building the static site.")
       },
+      rewriteAssetPaths := {
+        val filePath: String        = "public/stylesheets/manifest.css"
+        val originalContent: String = readFileContent(filePath)
+
+        val log = streams.value.log
+        log.info("Rewriting asset paths...")
+
+        updateFileContent(
+          filePath,
+          originalContent.replace("url(\"", "url(\"/guides/fraud-prevention")
+        )
+      },
+      generateFiles := rewriteAssetPaths.dependsOn(generateSite).value,
       (Compile / compile) := (Compile / compile).dependsOn(generateFiles).value
     )
-
-  def generateSite(): Unit = {
-    streams.value.log.info("Generating static site...")
-
-    val result = ("bundle install" #&& Process(
-      "bundle exec middleman build --build-dir=public/ --clean --verbose",
-      None,
-      "BASE_PATH" -> "/guides/fraud-prevention/"
-    )).!
-    if (result != 0) sys.error("There was an error building the static site.")
-  }
-
-  private def rewriteAssetPaths(): Unit = {
-    streams.value.log.info("Rewriting asset paths...")
-
-    val filePath: String        = "public/stylesheets/manifest.css"
-    val originalContent: String = readFileContent(filePath)
-
-    updateFileContent(
-      filePath,
-      originalContent.replace("url(\"", "url(\"/guides/fraud-prevention")
-    )
-  }
 
   private def readFileContent(filePath: String): String = {
     val file: File             = new File(filePath)
