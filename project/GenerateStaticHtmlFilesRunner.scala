@@ -32,13 +32,13 @@ object GenerateStaticHtmlFilesRunner extends AutoPlugin {
   override def projectSettings: Seq[Setting[?]] =
     Seq(
       generateFiles := {
-        generateStatusFilesProcess()
+        generateSite()
         rewriteAssetPaths()
       },
       (Compile / compile) := (Compile / compile).dependsOn(generateFiles).value
     )
 
-  def generateStatusFilesProcess(): Unit = {
+  def generateSite(): Unit = {
     val result = ("bundle install" #&& Process(
       "bundle exec middleman build --build-dir=public/ --clean --verbose",
       None,
