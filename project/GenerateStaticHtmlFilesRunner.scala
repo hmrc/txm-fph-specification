@@ -34,6 +34,7 @@ object GenerateStaticHtmlFilesRunner extends AutoPlugin {
 
   override def projectSettings: Seq[Setting[?]] =
     Seq(
+      generateFiles := rewriteAssetPaths.dependsOn(generateSite).value,
       generateSite := {
         streams.value.log.info("Generating static site...")
 
@@ -45,18 +46,16 @@ object GenerateStaticHtmlFilesRunner extends AutoPlugin {
         if (result != 0) sys.error("There was an error building the static site.")
       },
       rewriteAssetPaths := {
+        streams.value.log.info("Rewriting asset paths...")
+
         val filePath: String        = "public/stylesheets/manifest.css"
         val originalContent: String = readFileContent(filePath)
-
-        val log = streams.value.log
-        log.info("Rewriting asset paths...")
 
         updateFileContent(
           filePath,
           originalContent.replace("url(\"", "url(\"/guides/fraud-prevention")
         )
       },
-      generateFiles := rewriteAssetPaths.dependsOn(generateSite).value,
       (Compile / compile) := (Compile / compile).dependsOn(generateFiles).value
     )
 
