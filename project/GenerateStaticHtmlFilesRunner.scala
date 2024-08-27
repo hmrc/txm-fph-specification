@@ -32,18 +32,16 @@ object GenerateStaticHtmlFilesRunner extends AutoPlugin {
   override def projectSettings: Seq[Setting[?]] =
     Seq(
       generateFiles := {
-        val log = streams.value.log
-
-        log.info("Generating static site...")
         generateSite()
 
-        log.info("Rewriting asset paths...")
         rewriteAssetPaths()
       },
       (Compile / compile) := (Compile / compile).dependsOn(generateFiles).value
     )
 
   def generateSite(): Unit = {
+    streams.value.log.info("Generating static site...")
+
     val result = ("bundle install" #&& Process(
       "bundle exec middleman build --build-dir=public/ --clean --verbose",
       None,
@@ -53,6 +51,8 @@ object GenerateStaticHtmlFilesRunner extends AutoPlugin {
   }
 
   private def rewriteAssetPaths(): Unit = {
+    streams.value.log.info("Rewriting asset paths...")
+
     val filePath: String        = "public/stylesheets/manifest.css"
     val originalContent: String = readFileContent(filePath)
 
