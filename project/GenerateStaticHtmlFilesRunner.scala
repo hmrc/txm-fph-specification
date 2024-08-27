@@ -14,34 +14,62 @@
  * limitations under the License.
  */
 
-import sbt.*
 import uk.gov.hmrc.sbtdistributables.*
-import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin.distTgzTask
-
+import java.io.PrintWriter
+import scala.io.{BufferedSource, Source}
 import scala.sys.process.*
+import sbt.*
+import sbt.Keys.*
 
 object GenerateStaticHtmlFilesRunner extends AutoPlugin {
 
-  override def requires = SbtDistributablesPlugin
+  override def requires: SbtDistributablesPlugin.type = SbtDistributablesPlugin
 
-  override def trigger = AllRequirements
+  override def trigger: PluginTrigger = AllRequirements
 
-  private val generateFiles = TaskKey[Int]("generateFiles", "Generates static files for Ruby application")
+  private val generateFiles: TaskKey[Unit] = TaskKey[Unit]("generateFiles", "Generates static files for Ruby application")
+  private val generateSite: TaskKey[Unit]  = TaskKey[Unit]("generateSite", "Runs bundle exec middleman to generate the static site")
+  private val rewriteAssetPaths: TaskKey[Unit] =
+    TaskKey[Unit]("rewriteAssetPaths", "Rewrites asset paths required for deployment in an environment")
 
-  override def projectSettings: Seq[Setting[_]] =
+  override def projectSettings: Seq[Setting[?]] =
     Seq(
-      generateFiles := {
-        generateStatusFilesProcess
+      generateFiles := rewriteAssetPaths.dependsOn(generateSite).value,
+      generateSite := {
+        streams.value.log.info("Generating static site...")
+
+        val result = ("bundle install" #&& Process(
+          "bundle exec middleman build --build-dir=public/ --clean --verbose",
+          None,
+          "BASE_PATH" -> "/guides/fraud-prevention/"
+        )).!
+        if (result != 0) sys.error("There was an error building the static site.")
       },
-      distTgzTask := (distTgzTask dependsOn generateFiles).value
+      rewriteAssetPaths := {
+        streams.value.log.info("Rewriting asset paths...")
+
+        val filePath: String        = "public/stylesheets/manifest.css"
+        val originalContent: String = readFileContent(filePath)
+
+        updateFileContent(
+          filePath,
+          originalContent.replace("url(\"", "url(\"/guides/fraud-prevention")
+        )
+      },
+      (Compile / compile) := (Compile / compile).dependsOn(generateFiles).value
     )
 
-  def generateStatusFilesProcess: Int =
-    {
-      "bundle install" #&& Process(
-        "bundle exec middleman build --build-dir=public/ --clean --verbose",
-        None,
-        "BASE_PATH" -> "/guides/fraud-prevention/"
-      )
-    }.!
+  private def readFileContent(filePath: String): String = {
+    val file: File             = new File(filePath)
+    val source: BufferedSource = Source.fromFile(file, "UTF-8")
+    try source.getLines().mkString("\n")
+    finally source.close()
+  }
+
+  private def updateFileContent(filePath: String, newContent: String): Unit = {
+    val file: File               = new File(filePath)
+    val printWriter: PrintWriter = new PrintWriter(file, "UTF-8")
+    try printWriter.write(newContent)
+    finally printWriter.close()
+  }
 }
