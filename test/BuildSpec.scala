@@ -23,7 +23,7 @@ import scala.io.{BufferedSource, Source}
 
 class BuildSpec extends AnyWordSpec with Matchers {
   "Building the content" should {
-    "rewrite font asset paths" in {
+    "ensure the assets are binded to the correct path prefix" in {
       val filePath: String = "public/stylesheets/manifest.css"
 
       val updatedContent: String = readFileContent(filePath)
