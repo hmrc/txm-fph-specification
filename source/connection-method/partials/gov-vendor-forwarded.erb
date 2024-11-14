@@ -6,7 +6,7 @@
   <ul class="govuk-list govuk-list--bullet">
     <li>For each hop over the internet, a key-value data structure with a <code>by</code> and <code>for</code> field must be appended to the list</li>
 
-    <li>The <code>by</code> field must be the public IP address that the server received the request on. For the last hop, this is the public IP address of the server and value of Gov-Vendor-Public-IP.</li>
+    <li>The <code>by</code> field must be the public IP address that the server received the request on. For the first hop, this is the public IP address of the server and value of Gov-Vendor-Public-IP.</li>
 
     <li>The <code>for</code> field must be the public IP address of the request sender. For the first hop, this is the public IP address of the client and value of Gov-Client-Public-IP. For subsequent hops, it is the public IP address of the intermediate server.</li>
 
