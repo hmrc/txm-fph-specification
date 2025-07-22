@@ -205,7 +205,7 @@ DEPENDENCIES
   govuk_tech_docs (~> 5.0.2)
   thin (~> 1.7.2)
   tzinfo-data
-  wdm (~> 0.1.0)
+  wdm (~> 0.2.0)
 
 BUNDLED WITH
-   2.1.4
+   2.7.1
