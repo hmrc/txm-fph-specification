@@ -11,4 +11,4 @@ gem 'tzinfo-data', platforms: [:windows, :jruby]
 # Include the tech docs gem
 gem 'govuk_tech_docs', '~> 5.0.2'
 
-gem 'thin', '~> 1.7.2'
+gem 'thin', '~> 2.0', '>= 2.0.1'
