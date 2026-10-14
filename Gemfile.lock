@@ -12,6 +12,7 @@ GEM
       execjs (~> 2)
     backports (3.25.1)
     base64 (0.3.0)
+    benchmark (0.5.0)
     bigdecimal (3.2.2)
     chronic (0.10.2)
     chunky_png (1.4.0)
@@ -19,7 +20,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonmarker (0.23.11)
+    commonmarker (0.21.1)
+      ruby-enum (~> 0.5)
     compass (1.0.3)
       chunky_png (~> 1.2)
       compass-core (~> 1.0.2)
@@ -37,6 +39,7 @@ GEM
     csv (3.3.5)
     daemons (1.4.1)
     dotenv (3.1.8)
+    drb (2.2.3)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -141,7 +144,9 @@ GEM
       middleman-core (>= 3.2)
       rouge (~> 3.2)
     mini_portile2 (2.8.9)
-    minitest (5.25.5)
+    minitest (6.0.6)
+      drb (~> 2.0)
+      prism (~> 1.5)
     multi_json (1.17.0)
     mutex_m (0.3.0)
     nokogiri (1.18.9)
@@ -156,6 +161,7 @@ GEM
     padrino-support (0.15.3)
     parallel (1.27.0)
     parslet (2.0.0)
+    prism (1.9.0)
     public_suffix (6.0.2)
     racc (1.8.1)
     rack (2.2.17)
@@ -168,6 +174,8 @@ GEM
     redcarpet (3.6.1)
     rexml (3.4.1)
     rouge (3.30.0)
+    ruby-enum (0.9.0)
+      i18n
     sass (3.4.25)
     sass-embedded (1.89.2)
       google-protobuf (~> 4.31)
@@ -203,6 +211,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  benchmark (~> 0.5.0)
   govuk_tech_docs (~> 5.0.2)
   thin (~> 2.0, >= 2.0.1)
   tzinfo-data
